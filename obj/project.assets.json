@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\juanm\\source\\repos\\AppConsorcio\\AppConsorcio.csproj",
+      "projectUniqueName": "C:\\Users\\juanm\\OneDrive\\Escritorio\\AppConsorcio\\AppConsorcio.csproj",
       "projectName": "AppConsorcio",
-      "projectPath": "C:\\Users\\juanm\\source\\repos\\AppConsorcio\\AppConsorcio.csproj",
+      "projectPath": "C:\\Users\\juanm\\OneDrive\\Escritorio\\AppConsorcio\\AppConsorcio.csproj",
       "packagesPath": "C:\\Users\\juanm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\juanm\\source\\repos\\AppConsorcio\\obj\\",
+      "outputPath": "C:\\Users\\juanm\\OneDrive\\Escritorio\\AppConsorcio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\juanm\\AppData\\Roaming\\NuGet\\NuGet.Config",
