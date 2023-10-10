@@ -29,39 +29,27 @@
         private void InitializeComponent()
         {
             btnComunicados = new Button();
-            btnReservas = new Button();
             btnReclamos = new Button();
             btnConfiguracion = new Button();
-            label1 = new Label();
+            lbl1 = new Label();
             SuspendLayout();
             // 
             // btnComunicados
             // 
             btnComunicados.BackColor = Color.Transparent;
             btnComunicados.BackgroundImageLayout = ImageLayout.Center;
-            btnComunicados.Location = new Point(300, 150);
+            btnComunicados.Location = new Point(300, 166);
             btnComunicados.Name = "btnComunicados";
             btnComunicados.Size = new Size(219, 32);
             btnComunicados.TabIndex = 0;
             btnComunicados.Text = "Comunicados";
             btnComunicados.UseVisualStyleBackColor = false;
             // 
-            // btnReservas
-            // 
-            btnReservas.BackColor = Color.Transparent;
-            btnReservas.BackgroundImageLayout = ImageLayout.Center;
-            btnReservas.Location = new Point(300, 208);
-            btnReservas.Name = "btnReservas";
-            btnReservas.Size = new Size(219, 32);
-            btnReservas.TabIndex = 1;
-            btnReservas.Text = "Reservas";
-            btnReservas.UseVisualStyleBackColor = false;
-            // 
             // btnReclamos
             // 
             btnReclamos.BackColor = Color.Transparent;
             btnReclamos.BackgroundImageLayout = ImageLayout.Center;
-            btnReclamos.Location = new Point(300, 266);
+            btnReclamos.Location = new Point(300, 231);
             btnReclamos.Name = "btnReclamos";
             btnReclamos.Size = new Size(219, 32);
             btnReclamos.TabIndex = 2;
@@ -72,24 +60,24 @@
             // 
             btnConfiguracion.BackColor = Color.Transparent;
             btnConfiguracion.BackgroundImageLayout = ImageLayout.Center;
-            btnConfiguracion.Location = new Point(300, 324);
+            btnConfiguracion.Location = new Point(300, 297);
             btnConfiguracion.Name = "btnConfiguracion";
             btnConfiguracion.Size = new Size(219, 32);
             btnConfiguracion.TabIndex = 3;
             btnConfiguracion.Text = "Configuracion";
             btnConfiguracion.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // lbl1
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Cooper Black", 27.75F, FontStyle.Italic, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(295, 50);
-            label1.Name = "label1";
-            label1.Size = new Size(228, 42);
-            label1.TabIndex = 4;
-            label1.Text = "Bienvenido";
+            lbl1.AutoSize = true;
+            lbl1.BackColor = Color.Transparent;
+            lbl1.Font = new Font("Microsoft Sans Serif", 36F, FontStyle.Italic, GraphicsUnit.Point);
+            lbl1.ForeColor = Color.White;
+            lbl1.Location = new Point(280, 51);
+            lbl1.Name = "lbl1";
+            lbl1.Size = new Size(262, 55);
+            lbl1.TabIndex = 4;
+            lbl1.Text = "Bienvenido";
             // 
             // Menu
             // 
@@ -98,11 +86,11 @@
             BackgroundImage = Properties.Resources.fondo_borroso_oscuro_abstracto_textura_suave_degradado_color_brillante_brillante_sitio_web_patron_banner_h;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
-            Controls.Add(label1);
+            Controls.Add(lbl1);
             Controls.Add(btnConfiguracion);
             Controls.Add(btnReclamos);
-            Controls.Add(btnReservas);
             Controls.Add(btnComunicados);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Menu";
             Text = "Menu";
             ResumeLayout(false);
@@ -112,9 +100,8 @@
         #endregion
 
         private Button btnComunicados;
-        private Button btnReservas;
         private Button btnReclamos;
         private Button btnConfiguracion;
-        private Label label1;
+        private Label lbl1;
     }
 }

@@ -89,10 +89,19 @@ namespace AppConsorcio
                 return; // volver a preguntar
             }
 
+            // Verificar si el usuario es "admin" y la contraseña es "a"
+            if (usuarioIngresado == "admin" && contraseñaIngresada == "a")
+            {
+                // Si el usuario es "admin" y la contraseña es "a", abrir el formulario especifico del admin
+                FormAdmin formAdmin = new FormAdmin();
+                formAdmin.ShowDialog();
+                return;
+            }
+
             try
             {
                 // Cargar y analizar el archivo XML
-                string xmlFilePath = "C:\\Users\\juanm\\source\\repos\\AppConsorcio\\Datos.xml";
+                string xmlFilePath = "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\Datos.xml";
 
                 XDocument xmlDoc = XDocument.Load(xmlFilePath);
 
@@ -102,7 +111,7 @@ namespace AppConsorcio
                 foreach (var usuarioElement in xmlDoc.Root.Elements("usuario"))
                 {
                     string nombre = usuarioElement.Element("nombre").Value;
-                    string contraseña = usuarioElement.Element("contraseña").Value; 
+                    string contraseña = usuarioElement.Element("contraseña").Value;
 
                     usuarios.Add(new Usuario { usuario = nombre, contraseña = contraseña });
                 }
@@ -145,6 +154,7 @@ namespace AppConsorcio
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
 
         // Define una clase para representar la estructura del usuario en el XML
         private class Usuario
