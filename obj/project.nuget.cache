@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "X7aTkgfn6PxuF3NjVhowWlNeRMTz57pTAsyuB4kxfyveuIY8UyDY/4GVu0ICfOgX85mwehpZZ/e6h7Nt4v7i+g==",
+  "dgSpecHash": "L+u5Z1DzVeYZJ/liZ3iM9MzGcnepe1K4eyKZjBL6NGiBziAQsRHfQvPvBAhr/lWOzjOcZx14zxbdx3gesCQhvQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\AppConsorcio.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Juanma\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             btnComunicados = new Button();
             btnReclamos = new Button();
             btnConfiguracion = new Button();
             lbl1 = new Label();
+            cboComunicados = new ComboBox();
+            comunicadoBindingSource = new BindingSource(components);
+            ((System.ComponentModel.ISupportInitialize)comunicadoBindingSource).BeginInit();
             SuspendLayout();
             // 
             // btnComunicados
@@ -44,6 +48,7 @@
             btnComunicados.TabIndex = 0;
             btnComunicados.Text = "Comunicados";
             btnComunicados.UseVisualStyleBackColor = false;
+            btnComunicados.Click += btnComunicados_Click;
             // 
             // btnReclamos
             // 
@@ -79,6 +84,20 @@
             lbl1.TabIndex = 4;
             lbl1.Text = "Bienvenido";
             // 
+            // cboComunicados
+            // 
+            cboComunicados.DataSource = comunicadoBindingSource;
+            cboComunicados.FormattingEnabled = true;
+            cboComunicados.Location = new Point(248, 357);
+            cboComunicados.Name = "cboComunicados";
+            cboComunicados.Size = new Size(301, 23);
+            cboComunicados.TabIndex = 5;
+            cboComunicados.Visible = false;
+            // 
+            // comunicadoBindingSource
+            // 
+            comunicadoBindingSource.DataSource = typeof(Comunicado);
+            // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -86,6 +105,7 @@
             BackgroundImage = Properties.Resources.fondo_borroso_oscuro_abstracto_textura_suave_degradado_color_brillante_brillante_sitio_web_patron_banner_h;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(cboComunicados);
             Controls.Add(lbl1);
             Controls.Add(btnConfiguracion);
             Controls.Add(btnReclamos);
@@ -93,6 +113,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "Menu";
             Text = "Menu";
+            ((System.ComponentModel.ISupportInitialize)comunicadoBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -103,5 +124,7 @@
         private Button btnReclamos;
         private Button btnConfiguracion;
         private Label lbl1;
+        private ComboBox cboComunicados;
+        private BindingSource comunicadoBindingSource;
     }
 }

@@ -25,5 +25,15 @@ namespace AppConsorcio
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void btnEmitirComunicados_Click(object sender, EventArgs e)
+        {
+            // Crear una instancia del formulario FormEmitirComunicados
+            FormEmitirComunicados formEmitirComunicados = new FormEmitirComunicados();
+
+            // Mostrar el nuevo formulario
+            formEmitirComunicados.Show();
+        }
+
     }
 }

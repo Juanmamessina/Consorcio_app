@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdmin));
             lbl1 = new Label();
-            button1 = new Button();
+            btnEmitirComunicados = new Button();
             button2 = new Button();
             button3 = new Button();
             picCerrar = new PictureBox();
@@ -52,17 +52,18 @@
             lbl1.Text = "Bienvenido, administrador\r\n\r\n";
             lbl1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // btnEmitirComunicados
             // 
-            button1.BackColor = Color.Crimson;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Location = new Point(303, 157);
-            button1.Name = "button1";
-            button1.Size = new Size(229, 23);
-            button1.TabIndex = 1;
-            button1.Text = "Emitir comunicado";
-            button1.UseVisualStyleBackColor = false;
+            btnEmitirComunicados.BackColor = Color.Crimson;
+            btnEmitirComunicados.FlatAppearance.BorderSize = 0;
+            btnEmitirComunicados.FlatStyle = FlatStyle.Popup;
+            btnEmitirComunicados.Location = new Point(303, 157);
+            btnEmitirComunicados.Name = "btnEmitirComunicados";
+            btnEmitirComunicados.Size = new Size(229, 23);
+            btnEmitirComunicados.TabIndex = 1;
+            btnEmitirComunicados.Text = "Emitir comunicado";
+            btnEmitirComunicados.UseVisualStyleBackColor = false;
+            btnEmitirComunicados.Click += btnEmitirComunicados_Click;
             // 
             // button2
             // 
@@ -122,7 +123,7 @@
             Controls.Add(picCerrar);
             Controls.Add(button3);
             Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnEmitirComunicados);
             Controls.Add(lbl1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormAdmin";
@@ -137,7 +138,7 @@
         #endregion
 
         private Label lbl1;
-        private Button button1;
+        private Button btnEmitirComunicados;
         private Button button2;
         private Button button3;
         private PictureBox picCerrar;
