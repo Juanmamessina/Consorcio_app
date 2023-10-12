@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using Newtonsoft.Json;
-using System.IO; // Asegúrate de importar la referencia para trabajar con archivos
+using System.IO;
 
 namespace AppConsorcio
 {
     public partial class FormEmitirComunicados : Form
     {
-        // Declarar una lista para almacenar los comunicados
         private List<Comunicado> comunicadosList = new List<Comunicado>();
 
         public FormEmitirComunicados()
@@ -16,12 +15,30 @@ namespace AppConsorcio
             InitializeComponent();
         }
 
+        private void picCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void picMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
         private void btnPublicarComunicado_Click(object sender, EventArgs e)
         {
+            string contenido = txtContenido.Text.Trim(); // Elimina espacios en blanco
+
+            if (string.IsNullOrEmpty(contenido))
+            {
+                MessageBox.Show("Por favor, ingresa el contenido del comunicado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             // Crear un nuevo comunicado
             Comunicado nuevoComunicado = new Comunicado
             {
-                Contenido = txtContenido.Text,
+                Contenido = contenido,
                 Fecha = DateTime.Now,
                 Autor = "Administrador"
             };
@@ -29,13 +46,21 @@ namespace AppConsorcio
             // Agregar el comunicado a la lista
             comunicadosList.Add(nuevoComunicado);
 
-            // Guardar la lista en un archivo JSON
-            string json = JsonConvert.SerializeObject(comunicadosList);
-            File.WriteAllText("comunicados.json", json);
+            try
+            {
+                // Guardar la lista en un archivo JSON
+                string json = JsonConvert.SerializeObject(comunicadosList);
+                File.WriteAllText("comunicados.json", json);
 
-            // Limpiar los campos de entrada
+                // Limpiar los campos de entrada
+                txtContenido.Clear();
 
-            txtContenido.Clear();
+                MessageBox.Show("El comunicado fue publicado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al guardar el comunicado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

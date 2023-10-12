@@ -28,9 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEmitirComunicados));
             lblEmitirComunicados = new Label();
             txtContenido = new TextBox();
             btnPublicarComunicado = new Button();
+            picCerrar = new PictureBox();
+            picMinimizar = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)picCerrar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picMinimizar).BeginInit();
             SuspendLayout();
             // 
             // lblEmitirComunicados
@@ -64,6 +69,28 @@
             btnPublicarComunicado.UseVisualStyleBackColor = false;
             btnPublicarComunicado.Click += btnPublicarComunicado_Click;
             // 
+            // picCerrar
+            // 
+            picCerrar.BackColor = Color.Transparent;
+            picCerrar.Image = Properties.Resources.Close_Icon;
+            picCerrar.Location = new Point(751, 12);
+            picCerrar.Name = "picCerrar";
+            picCerrar.Size = new Size(15, 15);
+            picCerrar.TabIndex = 5;
+            picCerrar.TabStop = false;
+            picCerrar.Click += picCerrar_Click;
+            // 
+            // picMinimizar
+            // 
+            picMinimizar.BackColor = Color.Transparent;
+            picMinimizar.Image = (Image)resources.GetObject("picMinimizar.Image");
+            picMinimizar.Location = new Point(730, 12);
+            picMinimizar.Name = "picMinimizar";
+            picMinimizar.Size = new Size(15, 15);
+            picMinimizar.TabIndex = 9;
+            picMinimizar.TabStop = false;
+            picMinimizar.Click += picMinimizar_Click;
+            // 
             // FormEmitirComunicados
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -71,6 +98,8 @@
             BackgroundImage = Properties.Resources.render_3d_fondo_tecnologia_diseno_estructura_comunicaciones_red;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(778, 450);
+            Controls.Add(picMinimizar);
+            Controls.Add(picCerrar);
             Controls.Add(btnPublicarComunicado);
             Controls.Add(txtContenido);
             Controls.Add(lblEmitirComunicados);
@@ -78,6 +107,8 @@
             Name = "FormEmitirComunicados";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormEmitirComunicados";
+            ((System.ComponentModel.ISupportInitialize)picCerrar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picMinimizar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -87,5 +118,7 @@
         private Label lblEmitirComunicados;
         private TextBox txtContenido;
         private Button btnPublicarComunicado;
+        private PictureBox picCerrar;
+        private PictureBox picMinimizar;
     }
 }

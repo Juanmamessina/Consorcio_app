@@ -29,13 +29,18 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             btnComunicados = new Button();
             btnReclamos = new Button();
             btnConfiguracion = new Button();
             lbl1 = new Label();
             cboComunicados = new ComboBox();
             comunicadoBindingSource = new BindingSource(components);
+            picCerrar = new PictureBox();
+            picMinimizar = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)comunicadoBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picCerrar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picMinimizar).BeginInit();
             SuspendLayout();
             // 
             // btnComunicados
@@ -93,10 +98,33 @@
             cboComunicados.Size = new Size(301, 23);
             cboComunicados.TabIndex = 5;
             cboComunicados.Visible = false;
+            
             // 
             // comunicadoBindingSource
             // 
             comunicadoBindingSource.DataSource = typeof(Comunicado);
+            // 
+            // picCerrar
+            // 
+            picCerrar.BackColor = Color.Transparent;
+            picCerrar.Image = Properties.Resources.Close_Icon;
+            picCerrar.Location = new Point(773, 12);
+            picCerrar.Name = "picCerrar";
+            picCerrar.Size = new Size(15, 15);
+            picCerrar.TabIndex = 6;
+            picCerrar.TabStop = false;
+            picCerrar.Click += picCerrar_Click;
+            // 
+            // picMinimizar
+            // 
+            picMinimizar.BackColor = Color.Transparent;
+            picMinimizar.Image = (Image)resources.GetObject("picMinimizar.Image");
+            picMinimizar.Location = new Point(752, 12);
+            picMinimizar.Name = "picMinimizar";
+            picMinimizar.Size = new Size(15, 15);
+            picMinimizar.TabIndex = 8;
+            picMinimizar.TabStop = false;
+            picMinimizar.Click += picMinimizar_Click;
             // 
             // Menu
             // 
@@ -105,6 +133,8 @@
             BackgroundImage = Properties.Resources.fondo_borroso_oscuro_abstracto_textura_suave_degradado_color_brillante_brillante_sitio_web_patron_banner_h;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(picMinimizar);
+            Controls.Add(picCerrar);
             Controls.Add(cboComunicados);
             Controls.Add(lbl1);
             Controls.Add(btnConfiguracion);
@@ -114,6 +144,8 @@
             Name = "Menu";
             Text = "Menu";
             ((System.ComponentModel.ISupportInitialize)comunicadoBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picCerrar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picMinimizar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -126,5 +158,7 @@
         private Label lbl1;
         private ComboBox cboComunicados;
         private BindingSource comunicadoBindingSource;
+        private PictureBox picCerrar;
+        private PictureBox picMinimizar;
     }
 }
