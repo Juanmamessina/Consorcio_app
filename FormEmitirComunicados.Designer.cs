@@ -56,7 +56,7 @@
             txtContenido.Name = "txtContenido";
             txtContenido.Size = new Size(464, 23);
             txtContenido.TabIndex = 1;
-            // 
+            
             // btnPublicarComunicado
             // 
             btnPublicarComunicado.BackColor = Color.Crimson;

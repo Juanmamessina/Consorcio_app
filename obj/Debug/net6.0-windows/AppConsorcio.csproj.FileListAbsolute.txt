@@ -39,3 +39,5 @@ C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows
 C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
 C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.csproj.AssemblyReference.cache
 C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.csproj.CopyComplete
+C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.FormComunicadosMenu.resources
+C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.FormHacerReclamo.resources

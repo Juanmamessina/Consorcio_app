@@ -37,14 +37,27 @@ namespace AppConsorcio
                 string json = File.ReadAllText("comunicados.json");
                 comunicadosList = JsonConvert.DeserializeObject<List<Comunicado>>(json);
 
-                cboComunicados.DataSource = comunicadosList; // Configura el ComboBox con la lista de comunicados
-                cboComunicados.DisplayMember = ""; // No defino una propiedad especifica para mostrar en el ComboBox
-                cboComunicados.Visible = true;
+                LitBComunicados.Items.Clear();
+
+                foreach (var comunicado in comunicadosList)
+                {
+                    // Usa el método ToString personalizado para formatear el comunicado
+                    string comunicadoFormateado = comunicado.ToString();
+                    LitBComunicados.Items.Add(comunicadoFormateado);
+                }
+
+                LitBComunicados.Visible = true;
             }
         }
 
+        private void btnReclamos_Click(object sender, EventArgs e)
+        {
+            // Crea una instancia del formulario FormComunicados
+            FormComunicadosMenu formComunicados = new FormComunicadosMenu();
 
-
+            // Muestra el formulario como una ventana modal
+            formComunicados.ShowDialog();
+        }
 
     }
 }

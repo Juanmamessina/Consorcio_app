@@ -27,12 +27,19 @@ namespace AppConsorcio
 
         private void btnPublicarComunicado_Click(object sender, EventArgs e)
         {
-            string contenido = txtContenido.Text.Trim(); // Elimina espacios en blanco
+            string contenido = txtContenido.Text.Trim();
 
             if (string.IsNullOrEmpty(contenido))
             {
                 MessageBox.Show("Por favor, ingresa el contenido del comunicado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }
+
+            // Cargar la lista de comunicados existente desde el archivo JSON
+            if (File.Exists("comunicados.json"))
+            {
+                string json = File.ReadAllText("comunicados.json");
+                comunicadosList = JsonConvert.DeserializeObject<List<Comunicado>>(json);
             }
 
             // Crear un nuevo comunicado
@@ -43,12 +50,12 @@ namespace AppConsorcio
                 Autor = "Administrador"
             };
 
-            // Agregar el comunicado a la lista
+            // Agregar el nuevo comunicado a la lista
             comunicadosList.Add(nuevoComunicado);
 
             try
             {
-                // Guardar la lista en un archivo JSON
+                // Guardar la lista completa de comunicados en el archivo JSON
                 string json = JsonConvert.SerializeObject(comunicadosList);
                 File.WriteAllText("comunicados.json", json);
 
@@ -62,5 +69,7 @@ namespace AppConsorcio
                 MessageBox.Show("Ocurrió un error al guardar el comunicado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        
     }
 }

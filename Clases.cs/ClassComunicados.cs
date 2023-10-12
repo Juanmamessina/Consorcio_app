@@ -14,9 +14,10 @@ namespace AppConsorcio
 
         public override string ToString()
         {
-            // Personaliza cómo se muestra un comunicado en el ComboBox
-            return $"{Autor} - {Fecha.ToString("HH:mm")} - {Contenido}";
+            // asi se va a ver en el listBox
+            return $"{Autor} - {Fecha.ToString("yyyy-MM-dd HH:mm")} - {Contenido}";
         }
+
     }
 
 

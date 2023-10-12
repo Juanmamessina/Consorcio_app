@@ -34,10 +34,10 @@
             btnReclamos = new Button();
             btnConfiguracion = new Button();
             lbl1 = new Label();
-            cboComunicados = new ComboBox();
             comunicadoBindingSource = new BindingSource(components);
             picCerrar = new PictureBox();
             picMinimizar = new PictureBox();
+            LitBComunicados = new ListBox();
             ((System.ComponentModel.ISupportInitialize)comunicadoBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picCerrar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picMinimizar).BeginInit();
@@ -65,6 +65,7 @@
             btnReclamos.TabIndex = 2;
             btnReclamos.Text = "Reclamos";
             btnReclamos.UseVisualStyleBackColor = false;
+            btnReclamos.Click += btnReclamos_Click;
             // 
             // btnConfiguracion
             // 
@@ -88,17 +89,6 @@
             lbl1.Size = new Size(262, 55);
             lbl1.TabIndex = 4;
             lbl1.Text = "Bienvenido";
-            // 
-            // cboComunicados
-            // 
-            cboComunicados.DataSource = comunicadoBindingSource;
-            cboComunicados.FormattingEnabled = true;
-            cboComunicados.Location = new Point(248, 357);
-            cboComunicados.Name = "cboComunicados";
-            cboComunicados.Size = new Size(301, 23);
-            cboComunicados.TabIndex = 5;
-            cboComunicados.Visible = false;
-            
             // 
             // comunicadoBindingSource
             // 
@@ -126,6 +116,16 @@
             picMinimizar.TabStop = false;
             picMinimizar.Click += picMinimizar_Click;
             // 
+            // LitBComunicados
+            // 
+            LitBComunicados.FormattingEnabled = true;
+            LitBComunicados.ItemHeight = 15;
+            LitBComunicados.Location = new Point(73, 145);
+            LitBComunicados.Name = "LitBComunicados";
+            LitBComunicados.Size = new Size(492, 244);
+            LitBComunicados.TabIndex = 9;
+            LitBComunicados.Visible = false;
+            // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -135,11 +135,11 @@
             ClientSize = new Size(800, 450);
             Controls.Add(picMinimizar);
             Controls.Add(picCerrar);
-            Controls.Add(cboComunicados);
             Controls.Add(lbl1);
             Controls.Add(btnConfiguracion);
             Controls.Add(btnReclamos);
             Controls.Add(btnComunicados);
+            Controls.Add(LitBComunicados);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Menu";
             Text = "Menu";
@@ -156,9 +156,9 @@
         private Button btnReclamos;
         private Button btnConfiguracion;
         private Label lbl1;
-        private ComboBox cboComunicados;
         private BindingSource comunicadoBindingSource;
         private PictureBox picCerrar;
         private PictureBox picMinimizar;
+        private ListBox LitBComunicados;
     }
 }
