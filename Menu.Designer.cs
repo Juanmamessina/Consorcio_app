@@ -37,7 +37,6 @@
             comunicadoBindingSource = new BindingSource(components);
             picCerrar = new PictureBox();
             picMinimizar = new PictureBox();
-            LitBComunicados = new ListBox();
             ((System.ComponentModel.ISupportInitialize)comunicadoBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picCerrar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picMinimizar).BeginInit();
@@ -116,16 +115,6 @@
             picMinimizar.TabStop = false;
             picMinimizar.Click += picMinimizar_Click;
             // 
-            // LitBComunicados
-            // 
-            LitBComunicados.FormattingEnabled = true;
-            LitBComunicados.ItemHeight = 15;
-            LitBComunicados.Location = new Point(73, 145);
-            LitBComunicados.Name = "LitBComunicados";
-            LitBComunicados.Size = new Size(492, 244);
-            LitBComunicados.TabIndex = 9;
-            LitBComunicados.Visible = false;
-            // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -139,7 +128,6 @@
             Controls.Add(btnConfiguracion);
             Controls.Add(btnReclamos);
             Controls.Add(btnComunicados);
-            Controls.Add(LitBComunicados);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Menu";
             Text = "Menu";
@@ -159,6 +147,5 @@
         private BindingSource comunicadoBindingSource;
         private PictureBox picCerrar;
         private PictureBox picMinimizar;
-        private ListBox LitBComunicados;
     }
 }

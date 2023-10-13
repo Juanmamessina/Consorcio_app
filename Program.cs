@@ -13,7 +13,7 @@ namespace AppConsorcio
             ApplicationConfiguration.Initialize();
             Application.Run(new FormLogIn());
             Application.Run(new Menu());
-            Application.Run(new FormAdmin());
+            Application.Run(new MenuAdmin());
         }
     }
 }

@@ -25,6 +25,7 @@ namespace AppConsorcio
         {
             Application.Exit();
         }
+
         private void picMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -32,33 +33,23 @@ namespace AppConsorcio
 
         private void btnComunicados_Click(object sender, EventArgs e)
         {
-            if (File.Exists("comunicados.json"))
-            {
-                string json = File.ReadAllText("comunicados.json");
-                comunicadosList = JsonConvert.DeserializeObject<List<Comunicado>>(json);
+           
 
-                LitBComunicados.Items.Clear();
+            FormVerComunicados formComunicados = new FormVerComunicados();
+            formComunicados.ShowDialog();
 
-                foreach (var comunicado in comunicadosList)
-                {
-                    // Usa el método ToString personalizado para formatear el comunicado
-                    string comunicadoFormateado = comunicado.ToString();
-                    LitBComunicados.Items.Add(comunicadoFormateado);
-                }
-
-                LitBComunicados.Visible = true;
-            }
+            
         }
 
         private void btnReclamos_Click(object sender, EventArgs e)
         {
-            // Crea una instancia del formulario FormComunicados
-            FormComunicadosMenu formComunicados = new FormComunicadosMenu();
+            
+
+            // Crea una instancia del formulario FormReclamosMenu
+            FormReclamosMenu formReclamos = new FormReclamosMenu();
 
             // Muestra el formulario como una ventana modal
-            formComunicados.ShowDialog();
+            formReclamos.ShowDialog();
         }
-
     }
 }
-

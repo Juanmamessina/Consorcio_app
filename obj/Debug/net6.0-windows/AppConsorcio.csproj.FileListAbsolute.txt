@@ -21,7 +21,6 @@ C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\bin\Debug\net6.0-windows
 C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\bin\Debug\net6.0-windows\AppConsorcio.runtimeconfig.json
 C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\bin\Debug\net6.0-windows\AppConsorcio.dll
 C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\bin\Debug\net6.0-windows\AppConsorcio.pdb
-C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.FormAdmin.resources
 C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.FormLogIn.resources
 C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.Menu.resources
 C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.Properties.Resources.resources
@@ -39,5 +38,8 @@ C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows
 C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
 C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.csproj.AssemblyReference.cache
 C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.csproj.CopyComplete
-C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.FormComunicadosMenu.resources
 C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.FormHacerReclamo.resources
+C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.FormReclamosMenu.resources
+C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.MenuAdmin.resources
+C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.FormVerComunicados.resources
+C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.FormVerReclamos.resources

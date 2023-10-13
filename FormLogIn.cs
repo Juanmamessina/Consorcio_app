@@ -93,7 +93,7 @@ namespace AppConsorcio
             if (usuarioIngresado == "admin" && contraseñaIngresada == "a")
             {
                 // Si el usuario es "admin" y la contraseña es "a", abrir el formulario especifico del admin
-                FormAdmin formAdmin = new FormAdmin();
+                MenuAdmin formAdmin = new MenuAdmin();
                 formAdmin.ShowDialog();
                 return;
             }

@@ -34,8 +34,10 @@
             btnPublicarComunicado = new Button();
             picCerrar = new PictureBox();
             picMinimizar = new PictureBox();
+            picRegresar = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)picCerrar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picMinimizar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picRegresar).BeginInit();
             SuspendLayout();
             // 
             // lblEmitirComunicados
@@ -56,7 +58,7 @@
             txtContenido.Name = "txtContenido";
             txtContenido.Size = new Size(464, 23);
             txtContenido.TabIndex = 1;
-            
+            // 
             // btnPublicarComunicado
             // 
             btnPublicarComunicado.BackColor = Color.Crimson;
@@ -91,6 +93,18 @@
             picMinimizar.TabStop = false;
             picMinimizar.Click += picMinimizar_Click;
             // 
+            // picRegresar
+            // 
+            picRegresar.BackColor = Color.Transparent;
+            picRegresar.Image = (Image)resources.GetObject("picRegresar.Image");
+            picRegresar.Location = new Point(42, 12);
+            picRegresar.Name = "picRegresar";
+            picRegresar.Size = new Size(21, 26);
+            picRegresar.SizeMode = PictureBoxSizeMode.StretchImage;
+            picRegresar.TabIndex = 11;
+            picRegresar.TabStop = false;
+            picRegresar.Click += picRegresar_Click;
+            // 
             // FormEmitirComunicados
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -98,6 +112,7 @@
             BackgroundImage = Properties.Resources.render_3d_fondo_tecnologia_diseno_estructura_comunicaciones_red;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(778, 450);
+            Controls.Add(picRegresar);
             Controls.Add(picMinimizar);
             Controls.Add(picCerrar);
             Controls.Add(btnPublicarComunicado);
@@ -109,6 +124,7 @@
             Text = "FormEmitirComunicados";
             ((System.ComponentModel.ISupportInitialize)picCerrar).EndInit();
             ((System.ComponentModel.ISupportInitialize)picMinimizar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picRegresar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -120,5 +136,6 @@
         private Button btnPublicarComunicado;
         private PictureBox picCerrar;
         private PictureBox picMinimizar;
+        private PictureBox picRegresar;
     }
 }

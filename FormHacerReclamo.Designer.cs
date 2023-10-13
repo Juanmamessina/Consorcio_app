@@ -34,8 +34,10 @@
             btnPublicarReclamo = new Button();
             picCerrar = new PictureBox();
             picMinimizar = new PictureBox();
+            picRegresar = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)picCerrar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picMinimizar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picRegresar).BeginInit();
             SuspendLayout();
             // 
             // lblEmitirReclamos
@@ -92,6 +94,18 @@
             picMinimizar.TabStop = false;
             picMinimizar.Click += picMinimizar_Click;
             // 
+            // picRegresar
+            // 
+            picRegresar.BackColor = Color.Transparent;
+            picRegresar.Image = (Image)resources.GetObject("picRegresar.Image");
+            picRegresar.Location = new Point(46, 12);
+            picRegresar.Name = "picRegresar";
+            picRegresar.Size = new Size(21, 26);
+            picRegresar.SizeMode = PictureBoxSizeMode.StretchImage;
+            picRegresar.TabIndex = 12;
+            picRegresar.TabStop = false;
+            picRegresar.Click += picRegresar_Click;
+            // 
             // FormHacerReclamo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -99,6 +113,7 @@
             BackgroundImage = Properties.Resources.fondo_borroso_oscuro_abstracto_textura_suave_degradado_color_brillante_brillante_sitio_web_patron_banner_h;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(picRegresar);
             Controls.Add(picMinimizar);
             Controls.Add(picCerrar);
             Controls.Add(btnPublicarReclamo);
@@ -109,6 +124,7 @@
             Text = "FormHacerReclamo";
             ((System.ComponentModel.ISupportInitialize)picCerrar).EndInit();
             ((System.ComponentModel.ISupportInitialize)picMinimizar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picRegresar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -120,5 +136,6 @@
         private Button btnPublicarReclamo;
         private PictureBox picCerrar;
         private PictureBox picMinimizar;
+        private PictureBox picRegresar;
     }
 }
