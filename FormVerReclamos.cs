@@ -29,11 +29,8 @@ namespace AppConsorcio
         private void picRegresar_Click_1(object sender, EventArgs e)
         {
             // Cierra el formulario actual
+            this.DialogResult = DialogResult.OK;
             this.Close();
-
-            // Muestra el formulario anterior
-            FormReclamosMenu FormReclamosMenu = new FormReclamosMenu();
-            FormReclamosMenu.Show();
         }
 
         private void MostrarReclamos()

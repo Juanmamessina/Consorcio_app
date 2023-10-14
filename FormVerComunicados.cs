@@ -28,11 +28,8 @@ namespace AppConsorcio
         private void picRegresar_Click(object sender, EventArgs e)
         {
             // Cierra el formulario actual
+            this.DialogResult = DialogResult.OK;
             this.Close();
-
-            // Muestra el formulario principal (Menu)
-            Menu menuForm = new Menu();
-            menuForm.Show();
         }
 
         private void MostrarComunicados()
