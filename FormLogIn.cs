@@ -92,6 +92,8 @@ namespace AppConsorcio
             // Verificar si el usuario es "admin" y la contraseña es "a"
             if (usuarioIngresado == "admin" && contraseñaIngresada == "a")
             {
+                this.DialogResult = DialogResult.OK;
+                this.Close();
                 // Si el usuario es "admin" y la contraseña es "a", abrir el formulario especifico del admin
                 MenuAdmin formAdmin = new MenuAdmin();
                 formAdmin.ShowDialog();
@@ -133,9 +135,13 @@ namespace AppConsorcio
                     // Usuario y contraseña correctos, permitir el acceso
                     MessageBox.Show("El ingreso fue correcto");
 
-                    // Cerrar el formulario actual (FormLogIn) y abrir el nuevo formulario (Menu)
+                    // Cerrar el formulario actual (FormLogIn) 
                     this.DialogResult = DialogResult.OK;
                     this.Close();
+                    //abrir el menu
+                    Menu formMenu = new Menu();
+                    formMenu.ShowDialog();
+                    return;
                 }
                 else
                 {

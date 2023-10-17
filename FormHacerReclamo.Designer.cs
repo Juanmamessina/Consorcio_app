@@ -32,10 +32,8 @@
             lblEmitirReclamos = new Label();
             txtContenidoReclamo = new TextBox();
             btnPublicarReclamo = new Button();
-            picCerrar = new PictureBox();
             picMinimizar = new PictureBox();
             picRegresar = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)picCerrar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picMinimizar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picRegresar).BeginInit();
             SuspendLayout();
@@ -72,17 +70,6 @@
             btnPublicarReclamo.UseVisualStyleBackColor = false;
             btnPublicarReclamo.Click += btnPublicarReclamo_Click;
             // 
-            // picCerrar
-            // 
-            picCerrar.BackColor = Color.Transparent;
-            picCerrar.Image = Properties.Resources.Close_Icon;
-            picCerrar.Location = new Point(773, 12);
-            picCerrar.Name = "picCerrar";
-            picCerrar.Size = new Size(15, 15);
-            picCerrar.TabIndex = 7;
-            picCerrar.TabStop = false;
-            picCerrar.Click += picCerrar_Click;
-            // 
             // picMinimizar
             // 
             picMinimizar.BackColor = Color.Transparent;
@@ -115,14 +102,12 @@
             ClientSize = new Size(800, 450);
             Controls.Add(picRegresar);
             Controls.Add(picMinimizar);
-            Controls.Add(picCerrar);
             Controls.Add(btnPublicarReclamo);
             Controls.Add(txtContenidoReclamo);
             Controls.Add(lblEmitirReclamos);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormHacerReclamo";
             Text = "FormHacerReclamo";
-            ((System.ComponentModel.ISupportInitialize)picCerrar).EndInit();
             ((System.ComponentModel.ISupportInitialize)picMinimizar).EndInit();
             ((System.ComponentModel.ISupportInitialize)picRegresar).EndInit();
             ResumeLayout(false);
@@ -134,7 +119,6 @@
         private Label lblEmitirReclamos;
         private TextBox txtContenidoReclamo;
         private Button btnPublicarReclamo;
-        private PictureBox picCerrar;
         private PictureBox picMinimizar;
         private PictureBox picRegresar;
     }

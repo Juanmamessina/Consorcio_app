@@ -16,10 +16,6 @@ namespace AppConsorcio
             MostrarReclamos();
         }
 
-        private void picCerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
         private void picMinimizar_Click_1(object sender, EventArgs e)
         {
@@ -28,9 +24,10 @@ namespace AppConsorcio
 
         private void picRegresar_Click_1(object sender, EventArgs e)
         {
-            // Cierra el formulario actual
-            this.DialogResult = DialogResult.OK;
             this.Close();
+
+            FormReclamosMenu formReclamosMenu = new FormReclamosMenu();
+            formReclamosMenu.Show();
         }
 
         private void MostrarReclamos()
@@ -53,7 +50,7 @@ namespace AppConsorcio
             }
         }
 
-        
+
     }
 }
 

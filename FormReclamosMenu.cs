@@ -27,23 +27,25 @@ namespace AppConsorcio
 
         private void btnHacerReclamo_Click(object sender, EventArgs e)
         {
-            // Crea una instancia del formulario FormHacerReclamo
+            this.Close();
+            
             FormHacerReclamo formHacerReclamos = new FormHacerReclamo();
-
-            // Muestra el formulario como una ventana modal
-            formHacerReclamos.ShowDialog();
+            formHacerReclamos.Show();
         }
 
         private void btnVerReclamos_Click(object sender, EventArgs e)
         {
+            this.Close();
+
             FormVerReclamos formVerReclamos = new FormVerReclamos();
-            formVerReclamos.ShowDialog();
+            formVerReclamos.Show();
         }
         private void picRegresar_Click(object sender, EventArgs e)
         {
-            // Cierra el formulario actual
-            this.DialogResult = DialogResult.OK;
             this.Close();
+
+            Menu formMenu = new Menu();
+            formMenu.Show();
         }
     }
 }

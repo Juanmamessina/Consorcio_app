@@ -28,12 +28,10 @@ namespace AppConsorcio
 
         private void btnEmitirComunicados_Click(object sender, EventArgs e)
         {
-            // Crear una instancia del formulario FormEmitirComunicados
-            FormEmitirComunicados formEmitirComunicados = new FormEmitirComunicados();
+            this.Close();
 
-            // Mostrar el nuevo formulario
+            FormEmitirComunicados formEmitirComunicados = new FormEmitirComunicados();
             formEmitirComunicados.Show();
         }
-
     }
 }

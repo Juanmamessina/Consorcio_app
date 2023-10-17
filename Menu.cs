@@ -33,23 +33,18 @@ namespace AppConsorcio
 
         private void btnComunicados_Click(object sender, EventArgs e)
         {
-           
+            this.Close();
 
             FormVerComunicados formComunicados = new FormVerComunicados();
-            formComunicados.ShowDialog();
-
-            
+            formComunicados.Show();
         }
 
         private void btnReclamos_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
 
-            // Crea una instancia del formulario FormReclamosMenu
             FormReclamosMenu formReclamos = new FormReclamosMenu();
-
-            // Muestra el formulario como una ventana modal
-            formReclamos.ShowDialog();
+            formReclamos.Show();
         }
     }
 }

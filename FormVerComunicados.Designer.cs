@@ -30,10 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVerComunicados));
             rtbComunicados = new RichTextBox();
-            picCerrar = new PictureBox();
             picMinimizar = new PictureBox();
             picRegresar = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)picCerrar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picMinimizar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picRegresar).BeginInit();
             SuspendLayout();
@@ -46,17 +44,6 @@
             rtbComunicados.Size = new Size(550, 287);
             rtbComunicados.TabIndex = 11;
             rtbComunicados.Text = "";
-            // 
-            // picCerrar
-            // 
-            picCerrar.BackColor = Color.Transparent;
-            picCerrar.Image = Properties.Resources.Close_Icon;
-            picCerrar.Location = new Point(773, 12);
-            picCerrar.Name = "picCerrar";
-            picCerrar.Size = new Size(15, 15);
-            picCerrar.TabIndex = 12;
-            picCerrar.TabStop = false;
-            picCerrar.Click += picCerrar_Click_1;
             // 
             // picMinimizar
             // 
@@ -91,12 +78,10 @@
             ClientSize = new Size(800, 450);
             Controls.Add(picRegresar);
             Controls.Add(picMinimizar);
-            Controls.Add(picCerrar);
             Controls.Add(rtbComunicados);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormVerComunicados";
             Text = "FormVerComunicados";
-            ((System.ComponentModel.ISupportInitialize)picCerrar).EndInit();
             ((System.ComponentModel.ISupportInitialize)picMinimizar).EndInit();
             ((System.ComponentModel.ISupportInitialize)picRegresar).EndInit();
             ResumeLayout(false);
@@ -105,7 +90,6 @@
         #endregion
 
         private RichTextBox rtbComunicados;
-        private PictureBox picCerrar;
         private PictureBox picMinimizar;
         private PictureBox picRegresar;
     }

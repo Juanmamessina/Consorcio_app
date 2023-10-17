@@ -15,14 +15,16 @@ namespace AppConsorcio
             InitializeComponent();
         }
 
-        private void picCerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void picMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+        private void picRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            MenuAdmin formAdmin = new MenuAdmin();
+            formAdmin.Show();
         }
 
         private void btnPublicarComunicado_Click(object sender, EventArgs e)
@@ -70,11 +72,6 @@ namespace AppConsorcio
             }
         }
 
-        private void picRegresar_Click(object sender, EventArgs e)
-        {
-            // Cierra el formulario actual
-            this.DialogResult = DialogResult.OK;
-            this.Close();
-        }
+        
     }
 }

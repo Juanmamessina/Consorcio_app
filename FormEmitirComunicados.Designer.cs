@@ -32,10 +32,8 @@
             lblEmitirComunicados = new Label();
             txtContenido = new TextBox();
             btnPublicarComunicado = new Button();
-            picCerrar = new PictureBox();
             picMinimizar = new PictureBox();
             picRegresar = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)picCerrar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picMinimizar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picRegresar).BeginInit();
             SuspendLayout();
@@ -71,17 +69,6 @@
             btnPublicarComunicado.UseVisualStyleBackColor = false;
             btnPublicarComunicado.Click += btnPublicarComunicado_Click;
             // 
-            // picCerrar
-            // 
-            picCerrar.BackColor = Color.Transparent;
-            picCerrar.Image = Properties.Resources.Close_Icon;
-            picCerrar.Location = new Point(751, 12);
-            picCerrar.Name = "picCerrar";
-            picCerrar.Size = new Size(15, 15);
-            picCerrar.TabIndex = 5;
-            picCerrar.TabStop = false;
-            picCerrar.Click += picCerrar_Click;
-            // 
             // picMinimizar
             // 
             picMinimizar.BackColor = Color.Transparent;
@@ -114,7 +101,6 @@
             ClientSize = new Size(778, 450);
             Controls.Add(picRegresar);
             Controls.Add(picMinimizar);
-            Controls.Add(picCerrar);
             Controls.Add(btnPublicarComunicado);
             Controls.Add(txtContenido);
             Controls.Add(lblEmitirComunicados);
@@ -122,7 +108,6 @@
             Name = "FormEmitirComunicados";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormEmitirComunicados";
-            ((System.ComponentModel.ISupportInitialize)picCerrar).EndInit();
             ((System.ComponentModel.ISupportInitialize)picMinimizar).EndInit();
             ((System.ComponentModel.ISupportInitialize)picRegresar).EndInit();
             ResumeLayout(false);
@@ -134,7 +119,6 @@
         private Label lblEmitirComunicados;
         private TextBox txtContenido;
         private Button btnPublicarComunicado;
-        private PictureBox picCerrar;
         private PictureBox picMinimizar;
         private PictureBox picRegresar;
     }

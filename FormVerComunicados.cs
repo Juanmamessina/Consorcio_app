@@ -15,11 +15,7 @@ namespace AppConsorcio
             InitializeComponent();
             MostrarComunicados();
         }
-        private void picCerrar_Click_1(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
+        
         private void picMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -28,9 +24,13 @@ namespace AppConsorcio
         private void picRegresar_Click(object sender, EventArgs e)
         {
             // Cierra el formulario actual
-            this.DialogResult = DialogResult.OK;
             this.Close();
+
+            // Crea una instancia del formulario de menú y lo muestra
+            Menu formMenu = new Menu();
+            formMenu.Show();
         }
+
 
         private void MostrarComunicados()
         {

@@ -32,10 +32,8 @@
             rtbReclamos = new RichTextBox();
             picRegresar = new PictureBox();
             picMinimizar = new PictureBox();
-            picCerrar = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)picRegresar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picMinimizar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picCerrar).BeginInit();
             SuspendLayout();
             // 
             // rtbReclamos
@@ -70,17 +68,6 @@
             picMinimizar.TabStop = false;
             picMinimizar.Click += picMinimizar_Click_1;
             // 
-            // picCerrar
-            // 
-            picCerrar.BackColor = Color.Transparent;
-            picCerrar.Image = Properties.Resources.Close_Icon;
-            picCerrar.Location = new Point(773, 12);
-            picCerrar.Name = "picCerrar";
-            picCerrar.Size = new Size(15, 15);
-            picCerrar.TabIndex = 17;
-            picCerrar.TabStop = false;
-            picCerrar.Click += picCerrar_Click;
-            // 
             // FormVerReclamos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -88,7 +75,6 @@
             BackgroundImage = Properties.Resources.fondo_borroso_oscuro_abstracto_textura_suave_degradado_color_brillante_brillante_sitio_web_patron_banner_h;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
-            Controls.Add(picCerrar);
             Controls.Add(picMinimizar);
             Controls.Add(picRegresar);
             Controls.Add(rtbReclamos);
@@ -97,7 +83,6 @@
             Text = "FormVerReclamos";
             ((System.ComponentModel.ISupportInitialize)picRegresar).EndInit();
             ((System.ComponentModel.ISupportInitialize)picMinimizar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picCerrar).EndInit();
             ResumeLayout(false);
         }
 
@@ -106,6 +91,5 @@
         private RichTextBox rtbReclamos;
         private PictureBox picRegresar;
         private PictureBox picMinimizar;
-        private PictureBox picCerrar;
     }
 }
