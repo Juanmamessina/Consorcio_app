@@ -80,6 +80,7 @@
             Controls.Add(picMinimizar);
             Controls.Add(rtbComunicados);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormVerComunicados";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormVerComunicados";

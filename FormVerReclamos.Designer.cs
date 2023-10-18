@@ -79,6 +79,7 @@
             Controls.Add(picRegresar);
             Controls.Add(rtbReclamos);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormVerReclamos";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormVerReclamos";

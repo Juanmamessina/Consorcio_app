@@ -14,7 +14,7 @@ namespace AppConsorcio
 
         public override string ToString()
         {
-            // asi se va a ver en el listBox
+            // asi se va a ver en el rtb
             return $"{Autor} - {Fecha.ToString("yyyy-MM-dd HH:mm")} - {Contenido}";
         }
 

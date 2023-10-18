@@ -84,7 +84,7 @@ namespace AppConsorcio
             // Obtengo el user y la contraseña ingresados por el usuario
             string usuarioIngresado = txtUsuario.Text;
             string contraseñaIngresada = txtContraseña.Text;
-            
+
 
             // Valido que las entradas no estén vacías
             if (string.IsNullOrWhiteSpace(usuarioIngresado) || string.IsNullOrWhiteSpace(contraseñaIngresada))
@@ -99,7 +99,7 @@ namespace AppConsorcio
                 this.DialogResult = DialogResult.OK;
                 this.Close();
                 // Si el usuario es "admin" y la contraseña es "a", abrir el formulario especifico del admin
-                MenuAdmin formAdmin = new MenuAdmin();
+                MenuAD formAdmin = new MenuAD();
                 formAdmin.ShowDialog();
                 return;
             }
@@ -166,6 +166,6 @@ namespace AppConsorcio
             }
         }
 
-        
+
     }
 }

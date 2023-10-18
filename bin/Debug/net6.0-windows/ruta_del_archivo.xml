@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<usuarios>
+  <usuario>
+    <nombre>admin</nombre>
+    <contraseña>a</contraseña>
+  </usuario>
+  <usuario>
+    <nombre>juanma</nombre>
+    <contraseña>messina</contraseña>
+  </usuario>
+  <usuario>
+    <nombre>t</nombre>
+    <contraseña>c</contraseña>
+  </usuario>
+  <usuario>
+    <nombre>raul</nombre>
+    <contraseña>gonzalez</contraseña>
+  </usuario>
+</usuarios>

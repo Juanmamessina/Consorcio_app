@@ -15,7 +15,7 @@ namespace AppConsorcio
             InitializeComponent();
         }
 
-        
+
 
         private void picMinimizar_Click(object sender, EventArgs e)
         {
@@ -45,6 +45,6 @@ namespace AppConsorcio
             formMenu.Show();
         }
 
-        
+
     }
 }

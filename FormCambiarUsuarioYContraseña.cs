@@ -15,7 +15,7 @@ namespace AppConsorcio
     public partial class FormCambiarUsuarioYContraseña : Form
     {
         private string nombreUsuarioActual;
-      
+
         public FormCambiarUsuarioYContraseña()
         {
             InitializeComponent();
@@ -46,7 +46,7 @@ namespace AppConsorcio
                 MessageBox.Show("Por favor, ingrese usuario y contraseña nuevas.");
                 return; // volver a preguntar
             }
-            
+
             // Cargar y analizar el archivo XML
             string xmlFilePath = "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\Datos.xml";
 

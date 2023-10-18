@@ -106,6 +106,7 @@
             Controls.Add(txtContenidoReclamo);
             Controls.Add(lblEmitirReclamos);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormHacerReclamo";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormHacerReclamo";

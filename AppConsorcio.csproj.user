@@ -7,6 +7,15 @@
     <Compile Update="FormConfiguracionMenu.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormCrearUsuarioAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormEditarUsuariosMenuAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormEliminarUsuarioAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -16,13 +25,13 @@
     <Compile Update="FormVerReclamos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="MenuAdmin.cs">
+    <Compile Update="MenuAD.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormReclamosMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormEmitirComunicados.cs">
+    <Compile Update="FormEmitirComunicadosAD.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormHacerReclamo.cs">

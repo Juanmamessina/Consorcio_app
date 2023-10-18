@@ -126,6 +126,7 @@
             Controls.Add(btnReclamos);
             Controls.Add(btnComunicados);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Menu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Menu";

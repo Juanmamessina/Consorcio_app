@@ -96,6 +96,7 @@
             Controls.Add(btbCerrarSesion);
             Controls.Add(btnCambiarUsuarioYcontraseña);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormConfiguracionMenu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormConfiguracionMenu";

@@ -129,6 +129,7 @@
             Controls.Add(txtContraseña);
             Controls.Add(txtUsuario);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormLogIn";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Log In";

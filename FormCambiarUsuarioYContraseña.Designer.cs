@@ -129,6 +129,7 @@
             Controls.Add(txtUsuarioNuevo);
             Controls.Add(lblEmitirReclamos);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormCambiarUsuarioYContraseña";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormCambiarUsuarioYContraseña";
