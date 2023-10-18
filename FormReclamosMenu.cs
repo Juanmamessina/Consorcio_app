@@ -15,10 +15,7 @@ namespace AppConsorcio
             InitializeComponent();
         }
 
-        private void picCerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        
 
         private void picMinimizar_Click(object sender, EventArgs e)
         {
@@ -28,7 +25,7 @@ namespace AppConsorcio
         private void btnHacerReclamo_Click(object sender, EventArgs e)
         {
             this.Close();
-            
+
             FormHacerReclamo formHacerReclamos = new FormHacerReclamo();
             formHacerReclamos.Show();
         }
@@ -47,5 +44,7 @@ namespace AppConsorcio
             Menu formMenu = new Menu();
             formMenu.Show();
         }
+
+        
     }
 }

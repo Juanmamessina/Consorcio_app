@@ -107,6 +107,7 @@
             Controls.Add(lblEmitirReclamos);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormHacerReclamo";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormHacerReclamo";
             ((System.ComponentModel.ISupportInitialize)picMinimizar).EndInit();
             ((System.ComponentModel.ISupportInitialize)picRegresar).EndInit();

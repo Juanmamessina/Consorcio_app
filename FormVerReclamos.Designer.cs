@@ -80,6 +80,7 @@
             Controls.Add(rtbReclamos);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormVerReclamos";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormVerReclamos";
             ((System.ComponentModel.ISupportInitialize)picRegresar).EndInit();
             ((System.ComponentModel.ISupportInitialize)picMinimizar).EndInit();

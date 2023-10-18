@@ -15,7 +15,7 @@ namespace AppConsorcio
             InitializeComponent();
             MostrarComunicados();
         }
-        
+
         private void picMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;

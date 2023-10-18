@@ -9,15 +9,25 @@ namespace AppConsorcio
     public partial class FormHacerReclamo : Form
     {
         private List<Reclamo> reclamosList = new List<Reclamo>();
+        private string nombreUsuarioActual;
 
         public FormHacerReclamo()
         {
             InitializeComponent();
+            nombreUsuarioActual = FormLogIn.nombreUsuarioActual;
         }
 
         private void picMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void picRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            FormReclamosMenu formReclamosMenu = new FormReclamosMenu();
+            formReclamosMenu.Show();
         }
 
         private void btnPublicarReclamo_Click(object sender, EventArgs e)
@@ -42,7 +52,7 @@ namespace AppConsorcio
             {
                 Contenido = contenido,
                 Fecha = DateTime.Now,
-                Autor = "Administrador"
+                Autor = nombreUsuarioActual,
             };
 
             // Agregar el nuevo reclamo a la lista
@@ -65,12 +75,6 @@ namespace AppConsorcio
             }
         }
 
-        private void picRegresar_Click(object sender, EventArgs e)
-        {
-            this.Close();
 
-            FormReclamosMenu formReclamosMenu = new FormReclamosMenu();
-            formReclamosMenu.Show();
-        }
     }
 }

@@ -31,10 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReclamosMenu));
             btnPublicarComunicado = new Button();
             btnVerReclamos = new Button();
-            picCerrar = new PictureBox();
             picMinimizar = new PictureBox();
             picRegresar = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)picCerrar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picMinimizar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picRegresar).BeginInit();
             SuspendLayout();
@@ -67,17 +65,6 @@
             btnVerReclamos.UseVisualStyleBackColor = false;
             btnVerReclamos.Click += btnVerReclamos_Click;
             // 
-            // picCerrar
-            // 
-            picCerrar.BackColor = Color.Transparent;
-            picCerrar.Image = Properties.Resources.Close_Icon;
-            picCerrar.Location = new Point(773, 12);
-            picCerrar.Name = "picCerrar";
-            picCerrar.Size = new Size(15, 15);
-            picCerrar.TabIndex = 7;
-            picCerrar.TabStop = false;
-            picCerrar.Click += picCerrar_Click;
-            // 
             // picMinimizar
             // 
             picMinimizar.BackColor = Color.Transparent;
@@ -87,6 +74,7 @@
             picMinimizar.Size = new Size(15, 15);
             picMinimizar.TabIndex = 9;
             picMinimizar.TabStop = false;
+            picMinimizar.Click += picMinimizar_Click;
             // 
             // picRegresar
             // 
@@ -109,14 +97,12 @@
             ClientSize = new Size(800, 450);
             Controls.Add(picRegresar);
             Controls.Add(picMinimizar);
-            Controls.Add(picCerrar);
             Controls.Add(btnVerReclamos);
             Controls.Add(btnPublicarComunicado);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormReclamosMenu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormReclamosMenu";
-            ((System.ComponentModel.ISupportInitialize)picCerrar).EndInit();
             ((System.ComponentModel.ISupportInitialize)picMinimizar).EndInit();
             ((System.ComponentModel.ISupportInitialize)picRegresar).EndInit();
             ResumeLayout(false);
@@ -126,7 +112,6 @@
 
         private Button btnPublicarComunicado;
         private Button btnVerReclamos;
-        private PictureBox picCerrar;
         private PictureBox picMinimizar;
         private PictureBox picRegresar;
     }

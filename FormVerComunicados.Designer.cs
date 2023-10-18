@@ -81,6 +81,7 @@
             Controls.Add(rtbComunicados);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormVerComunicados";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormVerComunicados";
             ((System.ComponentModel.ISupportInitialize)picMinimizar).EndInit();
             ((System.ComponentModel.ISupportInitialize)picRegresar).EndInit();

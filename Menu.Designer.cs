@@ -127,6 +127,7 @@
             Controls.Add(btnComunicados);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Menu";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Menu";
             ((System.ComponentModel.ISupportInitialize)comunicadoBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)picCerrar).EndInit();
