@@ -11,11 +11,11 @@ namespace AppConsorcio
 {
     public partial class FormLogIn : Form
     {
-        
         public FormLogIn()
         {
             InitializeComponent();
         }
+        public static string nombreUsuarioActual { get; private set; }
 
         //para poder arrastrar el form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -84,6 +84,7 @@ namespace AppConsorcio
             // Obtengo el user y la contraseña ingresados por el usuario
             string usuarioIngresado = txtUsuario.Text;
             string contraseñaIngresada = txtContraseña.Text;
+            
 
             // Valido que las entradas no estén vacías
             if (string.IsNullOrWhiteSpace(usuarioIngresado) || string.IsNullOrWhiteSpace(contraseñaIngresada))
@@ -135,8 +136,7 @@ namespace AppConsorcio
 
                 if (usuarioValido)
                 {
-
-                    
+                    nombreUsuarioActual = usuarioIngresado;
                     // Usuario y contraseña correctos, permitir el acceso
                     MessageBox.Show("El ingreso fue correcto");
 

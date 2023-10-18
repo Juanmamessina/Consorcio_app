@@ -15,9 +15,11 @@ namespace AppConsorcio
     public partial class FormCambiarUsuarioYContraseña : Form
     {
         private string nombreUsuarioActual;
+      
         public FormCambiarUsuarioYContraseña()
         {
             InitializeComponent();
+            nombreUsuarioActual = FormLogIn.nombreUsuarioActual;
         }
 
         private void picMinimizar_Click(object sender, EventArgs e)
@@ -34,7 +36,7 @@ namespace AppConsorcio
 
         private void btnCambiarUsuarioYContraseña_Click(object sender, EventArgs e)
         {
-            // Obtengo el user y la contraseña nuevas ingresados por el usuario
+            // Obtengo el usuario y la contraseña nuevas ingresados por el usuario
             string nuevoUsuarioIngresado = txtUsuarioNuevo.Text;
             string nuevaContraseñaIngresada = txtContraseñaNueva.Text;
 
@@ -44,7 +46,7 @@ namespace AppConsorcio
                 MessageBox.Show("Por favor, ingrese usuario y contraseña nuevas.");
                 return; // volver a preguntar
             }
-
+            
             // Cargar y analizar el archivo XML
             string xmlFilePath = "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\Datos.xml";
 
@@ -85,13 +87,9 @@ namespace AppConsorcio
             }
             else
             {
-                // Si llegamos aquí, el usuario no fue encontrado
+                // el usuario no fue encontrado
                 MessageBox.Show("Usuario no encontrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
-
     }
 }
-
