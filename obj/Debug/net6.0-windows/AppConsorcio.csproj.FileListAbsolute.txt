@@ -43,3 +43,5 @@ C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows
 C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.MenuAdmin.resources
 C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.FormVerComunicados.resources
 C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.FormVerReclamos.resources
+C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.FormConfiguracionMenu.resources
+C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.FormCambiarUsuarioYContraseña.resources

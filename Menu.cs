@@ -46,5 +46,13 @@ namespace AppConsorcio
             FormReclamosMenu formReclamos = new FormReclamosMenu();
             formReclamos.Show();
         }
+
+        private void btnConfiguracion_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            FormConfiguracionMenu formConfiguracion = new FormConfiguracionMenu();
+            formConfiguracion.Show();
+        }
     }
 }

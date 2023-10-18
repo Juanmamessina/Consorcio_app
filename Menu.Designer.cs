@@ -76,6 +76,7 @@
             btnConfiguracion.TabIndex = 3;
             btnConfiguracion.Text = "Configuracion";
             btnConfiguracion.UseVisualStyleBackColor = false;
+            btnConfiguracion.Click += btnConfiguracion_Click;
             // 
             // lbl1
             // 
@@ -88,10 +89,6 @@
             lbl1.Size = new Size(262, 55);
             lbl1.TabIndex = 4;
             lbl1.Text = "Bienvenido";
-            // 
-            // comunicadoBindingSource
-            // 
-            comunicadoBindingSource.DataSource = typeof(Comunicado);
             // 
             // picCerrar
             // 

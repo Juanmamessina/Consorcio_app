@@ -4,11 +4,14 @@ using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using AppConsorcio.Clases;
+using System.Security.Cryptography.X509Certificates;
 
 namespace AppConsorcio
 {
     public partial class FormLogIn : Form
     {
+        
         public FormLogIn()
         {
             InitializeComponent();
@@ -115,7 +118,7 @@ namespace AppConsorcio
                     string nombre = usuarioElement.Element("nombre").Value;
                     string contraseña = usuarioElement.Element("contraseña").Value;
 
-                    usuarios.Add(new Usuario { usuario = nombre, contraseña = contraseña });
+                    usuarios.Add(new Usuario { nombre = nombre, contraseña = contraseña });
                 }
 
                 // Verificar si el usuario y la contraseña coinciden con los registros en el XML
@@ -123,7 +126,7 @@ namespace AppConsorcio
 
                 foreach (var usuario in usuarios)
                 {
-                    if (usuario.usuario == usuarioIngresado && usuario.contraseña == contraseñaIngresada)
+                    if (usuario.nombre == usuarioIngresado && usuario.contraseña == contraseñaIngresada)
                     {
                         usuarioValido = true;
                         break;
@@ -132,6 +135,8 @@ namespace AppConsorcio
 
                 if (usuarioValido)
                 {
+
+                    
                     // Usuario y contraseña correctos, permitir el acceso
                     MessageBox.Show("El ingreso fue correcto");
 
@@ -161,12 +166,6 @@ namespace AppConsorcio
             }
         }
 
-
-        // Define una clase para representar la estructura del usuario en el XML
-        private class Usuario
-        {
-            public string usuario { get; set; }
-            public string contraseña { get; set; }
-        }
+        
     }
 }
