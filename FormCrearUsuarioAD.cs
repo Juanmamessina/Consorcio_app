@@ -1,4 +1,4 @@
-﻿using AppConsorcio.Clases;
+﻿using AppConsorcio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,15 +45,15 @@ namespace AppConsorcio
             // Crear una instancia de la clase Usuario con los datos ingresados
             Usuario usuarioNuevo = new Usuario
             {
-                nombre = nombreUsuarioNuevo,
-                contraseña = contraseñaUsuarioNuevo,
+                Nombre = nombreUsuarioNuevo,
+                Contraseña = contraseñaUsuarioNuevo,
             };
 
             XDocument xmlDoc = XDocument.Load("C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\Datos.xml");
 
             XElement usuarioElement = new XElement("usuario",
-                new XElement("nombre", usuarioNuevo.nombre),
-                new XElement("contraseña", usuarioNuevo.contraseña));
+                new XElement("nombre", usuarioNuevo.Nombre),
+                new XElement("contraseña", usuarioNuevo.Contraseña));
 
             xmlDoc.Element("usuarios").Add(usuarioElement);
             xmlDoc.Save("C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\Datos.xml");

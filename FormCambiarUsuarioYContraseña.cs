@@ -1,4 +1,4 @@
-﻿using AppConsorcio.Clases;
+﻿using AppConsorcio;
 using System;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +19,7 @@ namespace AppConsorcio
         public FormCambiarUsuarioYContraseña()
         {
             InitializeComponent();
-            nombreUsuarioActual = FormLogIn.nombreUsuarioActual;
+            nombreUsuarioActual = FormLogIn.NombreUsuarioActual;
         }
 
         private void picMinimizar_Click(object sender, EventArgs e)
@@ -40,56 +40,23 @@ namespace AppConsorcio
             string nuevoUsuarioIngresado = txtUsuarioNuevo.Text;
             string nuevaContraseñaIngresada = txtContraseñaNueva.Text;
 
-            // Valido que las entradas no estén vacías
-            if (string.IsNullOrWhiteSpace(nuevoUsuarioIngresado) || string.IsNullOrWhiteSpace(nuevaContraseñaIngresada))
+            // Llamada al método CambiarUsuarioYContraseña de la clase Usuario
+            bool usuarioConContraseñaYnombreCambiado = Usuario.CambiarUsuarioYContraseña(nuevoUsuarioIngresado, nuevaContraseñaIngresada, nombreUsuarioActual);
+
+            if (usuarioConContraseñaYnombreCambiado == true)
             {
-                MessageBox.Show("Por favor, ingrese usuario y contraseña nuevas.");
-                return; // volver a preguntar
-            }
-
-            // Cargar y analizar el archivo XML
-            string xmlFilePath = "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\Datos.xml";
-
-            XDocument xmlDoc = XDocument.Load(xmlFilePath);
-
-            // Obtener la lista de usuarios del XML
-            List<Usuario> usuarios = new List<Usuario>();
-
-            foreach (var usuarioElement in xmlDoc.Root.Elements("usuario"))
-            {
-                string nombre = usuarioElement.Element("nombre").Value;
-                string contraseña = usuarioElement.Element("contraseña").Value;
-
-                usuarios.Add(new Usuario { nombre = nombre, contraseña = contraseña });
-            }
-
-            // Encuentra y modifica al usuario actual
-            Usuario usuarioActual = usuarios.Find(u => u.nombre == nombreUsuarioActual);
-
-            if (usuarioActual != null)
-            {
-                // Modifica el nombre y la contraseña del usuario
-                usuarioActual.nombre = nuevoUsuarioIngresado;
-                usuarioActual.contraseña = nuevaContraseñaIngresada;
-
-                // Guarda la información actualizada en el archivo XML
-                xmlDoc.Root.Elements("usuario")
-                    .First(u => u.Element("nombre").Value == nombreUsuarioActual)
-                    .SetElementValue("nombre", nuevoUsuarioIngresado);
-
-                xmlDoc.Root.Elements("usuario")
-                    .First(u => u.Element("nombre").Value == nuevoUsuarioIngresado)
-                    .SetElementValue("contraseña", nuevaContraseñaIngresada);
-
-                xmlDoc.Save(xmlFilePath);
-
+                // Éxito
                 MessageBox.Show("Usuario y contraseña cambiados con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+                FormLogIn login = new FormLogIn();
+                login.Show();
             }
             else
             {
-                // el usuario no fue encontrado
-                MessageBox.Show("Usuario no encontrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Error
+                MessageBox.Show("Error al cambiar el usuario y la contraseña", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }

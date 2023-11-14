@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using System.IO;
+using AppConsorcio;
+
 
 namespace AppConsorcio
 {

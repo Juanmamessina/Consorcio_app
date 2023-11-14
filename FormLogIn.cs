@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using AppConsorcio.Clases;
+using AppConsorcio;
 using System.Security.Cryptography.X509Certificates;
+using System.Xml;
 
 namespace AppConsorcio
 {
@@ -15,7 +16,7 @@ namespace AppConsorcio
         {
             InitializeComponent();
         }
-        public static string nombreUsuarioActual { get; private set; }
+        public static string NombreUsuarioActual { get; private set; }
 
         //para poder arrastrar el form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -84,88 +85,59 @@ namespace AppConsorcio
             // Obtengo el user y la contraseña ingresados por el usuario
             string usuarioIngresado = txtUsuario.Text;
             string contraseñaIngresada = txtContraseña.Text;
+           
 
 
-            // Valido que las entradas no estén vacías
-            if (string.IsNullOrWhiteSpace(usuarioIngresado) || string.IsNullOrWhiteSpace(contraseñaIngresada))
-            {
-                MessageBox.Show("Por favor, ingrese usuario y contraseña.");
-                return; // volver a preguntar
-            }
+            bool usuarioValidado = Usuario.ValidarUsuario(usuarioIngresado, contraseñaIngresada);
 
-            // Verificar si el usuario es "admin" y la contraseña es "a"
-            if (usuarioIngresado == "admin" && contraseñaIngresada == "a")
-            {
-                this.DialogResult = DialogResult.OK;
-                this.Close();
-                // Si el usuario es "admin" y la contraseña es "a", abrir el formulario especifico del admin
-                MenuAD formAdmin = new MenuAD();
-                formAdmin.ShowDialog();
-                return;
-            }
 
             try
             {
-                // Cargar y analizar el archivo XML
-                string xmlFilePath = "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\Datos.xml";
-
-                XDocument xmlDoc = XDocument.Load(xmlFilePath);
-
-                // Obtener la lista de usuarios del XML
-                List<Usuario> usuarios = new List<Usuario>();
-
-                foreach (var usuarioElement in xmlDoc.Root.Elements("usuario"))
+                if (usuarioValidado == false)
                 {
-                    string nombre = usuarioElement.Element("nombre").Value;
-                    string contraseña = usuarioElement.Element("contraseña").Value;
-
-                    usuarios.Add(new Usuario { nombre = nombre, contraseña = contraseña });
-                }
-
-                // Verificar si el usuario y la contraseña coinciden con los registros en el XML
-                bool usuarioValido = false;
-
-                foreach (var usuario in usuarios)
-                {
-                    if (usuario.nombre == usuarioIngresado && usuario.contraseña == contraseñaIngresada)
-                    {
-                        usuarioValido = true;
-                        break;
-                    }
-                }
-
-                if (usuarioValido)
-                {
-                    nombreUsuarioActual = usuarioIngresado;
-                    // Usuario y contraseña correctos, permitir el acceso
-                    MessageBox.Show("El ingreso fue correcto");
-
-                    // Cerrar el formulario actual (FormLogIn) 
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
-                    //abrir el menu
-                    Menu formMenu = new Menu();
-                    formMenu.ShowDialog();
-                    return;
+                    MessageBox.Show("Usuario o contraseña incorrectos");
+                    return; // volver a preguntar
                 }
                 else
                 {
-                    // Usuario o contraseña incorrectos, mostrar un mensaje de error
-                    MessageBox.Show("Usuario o contraseña incorrecta.");
+                    NombreUsuarioActual = usuarioIngresado;
+                    MessageBox.Show("El ingreso fue exitoso");
+                    this.Close();
+                    Menu menu = new Menu();
+                    menu.Show();
+                }
+
+                // Verificar si el usuario es "admin" y la contraseña es "a"
+                if (usuarioIngresado == "admin" && contraseñaIngresada == "a")
+                {
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                    // Si el usuario es "admin" y la contraseña es "a", abrir el formulario especifico del admin
+                    MenuAD formAdmin = new MenuAD();
+                    formAdmin.ShowDialog();
+                    return;
                 }
             }
             catch (FileNotFoundException)
             {
                 // Manejar el caso en el que el archivo XML no se encuentra
-                MessageBox.Show("Archivo XML no encontrado.");
+                MessageBox.Show("Error: archivo XML no encontrado.");
+                return;
+            }
+            catch (XmlException ex)
+            {
+                // Manejar errores de análisis XML
+                MessageBox.Show($"Error al analizar XML: {ex.Message}");
+                return;
             }
             catch (Exception ex)
             {
-                // Manejar otras excepciones
-                MessageBox.Show("Error: " + ex.Message);
+                // Manejar otras excepciones inesperadas
+                MessageBox.Show($"Error inesperado: {ex.Message}");
+                return;
             }
+
+
         }
-
-
     }
 }

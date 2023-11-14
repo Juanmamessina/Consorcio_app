@@ -32,18 +32,20 @@ namespace AppConsorcio
 
         private void MostrarReclamos()
         {
+
+
             if (File.Exists("reclamos.json"))
-            {
-                string json = File.ReadAllText("reclamos.json");
-                reclamosList = JsonConvert.DeserializeObject<List<Reclamo>>(json);
+            { 
+               string json = File.ReadAllText("reclamos.json");
+               reclamosList = JsonConvert.DeserializeObject<List<Reclamo>>(json);
 
-                rtbReclamos.Clear();
+               rtbReclamos.Clear();
 
-                foreach (var reclamo in reclamosList)
+              foreach (var reclamo in reclamosList)
                 {
-                    // Usa el método ToString personalizado para formatear el reclamo
+                  // Usa el método ToString personalizado para formatear el reclamo
                     string reclamoFormateado = reclamo.ToString();
-                    rtbReclamos.AppendText(reclamoFormateado + Environment.NewLine);
+                   rtbReclamos.AppendText(reclamoFormateado + Environment.NewLine);
                 }
 
                 rtbReclamos.Visible = true;
