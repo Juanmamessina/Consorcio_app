@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.IO; // Añade esta línea para usar System.IO
+using System.IO; 
 using System.Windows.Forms;
 
 namespace AppConsorcio
@@ -41,8 +41,8 @@ namespace AppConsorcio
         {
             this.Close();
 
-            Menu formMenu = new Menu();
-            formMenu.Show();
+            MDImenu menu = new MDImenu();
+            menu.Show();
         }
 
 

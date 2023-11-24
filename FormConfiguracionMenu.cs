@@ -37,8 +37,8 @@ namespace AppConsorcio
         {
             this.Close();
 
-            Menu formMenu = new Menu();
-            formMenu.Show();
+            MDImenu menu = new MDImenu();
+            menu.Show();
         }
 
         private void picMinimizar_Click(object sender, EventArgs e)
