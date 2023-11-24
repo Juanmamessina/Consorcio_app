@@ -25,6 +25,9 @@
     <Compile Update="FormVerReclamos.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="MDImenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="MenuAD.cs">
       <SubType>Form</SubType>
     </Compile>

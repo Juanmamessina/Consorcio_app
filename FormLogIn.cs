@@ -7,6 +7,7 @@ using System.Xml.Linq;
 using AppConsorcio;
 using System.Security.Cryptography.X509Certificates;
 using System.Xml;
+using Clases;
 
 namespace AppConsorcio
 {
@@ -85,10 +86,10 @@ namespace AppConsorcio
             // Obtengo el user y la contraseña ingresados por el usuario
             string usuarioIngresado = txtUsuario.Text;
             string contraseñaIngresada = txtContraseña.Text;
-           
 
 
-            bool usuarioValidado = Usuario.ValidarUsuario(usuarioIngresado, contraseñaIngresada);
+            IOperacionesUsuario operacionesUsuario = new Usuario();
+            bool usuarioValidado = operacionesUsuario.ValidarUsuario(usuarioIngresado, contraseñaIngresada);
 
 
             try
@@ -103,7 +104,7 @@ namespace AppConsorcio
                     NombreUsuarioActual = usuarioIngresado;
                     MessageBox.Show("El ingreso fue exitoso");
                     this.Close();
-                    Menu menu = new Menu();
+                    MDImenu menu = new MDImenu();
                     menu.Show();
                 }
 

@@ -1,5 +1,6 @@
 ﻿using System.Xml.Linq;
 using System.Xml.Serialization;
+using Clases;
 using Newtonsoft.Json;
 
 
@@ -9,7 +10,7 @@ namespace AppConsorcio
 {
     [Serializable]
     [XmlRoot("usuarios")]
-    public class Usuario
+    public class Usuario : IOperacionesUsuario
     {
         private string nombre;
         private string contraseña;
@@ -29,7 +30,7 @@ namespace AppConsorcio
         public string Nombre { get => nombre; set => nombre = value; }
         public string Contraseña { get => contraseña; set => contraseña = value; }
 
-        public static bool ValidarUsuario(string nombre, string contraseña)
+        public bool ValidarUsuario(string nombre, string contraseña)
         {
             bool usuarioValido = false;
 
@@ -73,7 +74,7 @@ namespace AppConsorcio
         }
 
 
-        public static bool CambiarUsuarioYContraseña(string nuevoUsuarioIngresado, string nuevaContraseñaIngresada, string nombreUsuarioActual)
+        public bool CambiarUsuarioYContraseña(string nuevoUsuarioIngresado, string nuevaContraseñaIngresada, string nombreUsuarioActual)
         {
             // Valido que las entradas no estén vacías
             if (string.IsNullOrWhiteSpace(nuevoUsuarioIngresado) || string.IsNullOrWhiteSpace(nuevaContraseñaIngresada))
@@ -126,20 +127,20 @@ namespace AppConsorcio
             }
         }
 
-        public static bool PublicarReclamo(string contenido, string nombreUsuarioActual)
+        public bool PublicarReclamo(string contenido, string nombreUsuarioActual)
         {
             if (string.IsNullOrEmpty(contenido))
             {
                 return false;
             }
 
-            List<Reclamo> reclamosList = new List<Reclamo>();
+            Dictionary<string, List<Reclamo>> reclamosDict = new Dictionary<string, List<Reclamo>>();
 
-            // Cargar la lista de reclamos existente desde el archivo JSON
+            // Cargar el diccionario de reclamos existente desde el archivo JSON
             if (File.Exists("reclamos.json"))
             {
                 string json = File.ReadAllText("reclamos.json");
-                reclamosList = JsonConvert.DeserializeObject<List<Reclamo>>(json);
+                reclamosDict = JsonConvert.DeserializeObject<Dictionary<string, List<Reclamo>>>(json);
             }
 
             // Crear un nuevo reclamo
@@ -147,18 +148,22 @@ namespace AppConsorcio
             {
                 Contenido = contenido,
                 Fecha = DateTime.Now,
-                Autor = nombreUsuarioActual,
             };
 
-            // Agregar el nuevo reclamo a la lista
-            reclamosList.Add(nuevoReclamo);
+            // Agregar el nuevo reclamo a la lista de reclamos del usuario actual
+            if (!reclamosDict.ContainsKey(nombreUsuarioActual))
+            {
+                reclamosDict[nombreUsuarioActual] = new List<Reclamo>();
+            }
+            reclamosDict[nombreUsuarioActual].Add(nuevoReclamo);
 
-            // Guardar la lista completa de reclamos en el archivo JSON
-            string jsonUpdated = JsonConvert.SerializeObject(reclamosList);
+            // Guardar el diccionario completo de reclamos en el archivo JSON
+            string jsonUpdated = JsonConvert.SerializeObject(reclamosDict);
             File.WriteAllText("reclamos.json", jsonUpdated);
 
-            return true; // Devuelvo true para pasar que el reclamo se publicó con éxito
+            return true; // Devuelvo true para indicar que el reclamo se publicó con éxito
         }
+
 
 
 

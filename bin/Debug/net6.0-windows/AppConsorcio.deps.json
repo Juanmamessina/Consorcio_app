@@ -9,7 +9,6 @@
       "AppConsorcio/1.0.0": {
         "dependencies": {
           "Clases": "1.0.0",
-          "Logica": "1.0.0",
           "MySql.Data": "8.2.0",
           "Newtonsoft.Json": "13.0.3"
         },

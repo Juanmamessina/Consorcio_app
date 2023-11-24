@@ -44,6 +44,7 @@
             rtbComunicados.Size = new Size(550, 287);
             rtbComunicados.TabIndex = 11;
             rtbComunicados.Text = "";
+            
             // 
             // picMinimizar
             // 

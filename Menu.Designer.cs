@@ -84,7 +84,7 @@
             lbl1.BackColor = Color.Transparent;
             lbl1.Font = new Font("Microsoft Sans Serif", 36F, FontStyle.Italic, GraphicsUnit.Point);
             lbl1.ForeColor = Color.White;
-            lbl1.Location = new Point(280, 51);
+            lbl1.Location = new Point(273, 74);
             lbl1.Name = "lbl1";
             lbl1.Size = new Size(262, 55);
             lbl1.TabIndex = 4;

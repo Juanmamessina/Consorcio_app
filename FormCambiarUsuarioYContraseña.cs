@@ -1,4 +1,5 @@
 ﻿using AppConsorcio;
+using Clases;
 using System;
 using System.ComponentModel;
 using System.Data;
@@ -40,8 +41,8 @@ namespace AppConsorcio
             string nuevoUsuarioIngresado = txtUsuarioNuevo.Text;
             string nuevaContraseñaIngresada = txtContraseñaNueva.Text;
 
-            // Llamada al método CambiarUsuarioYContraseña de la clase Usuario
-            bool usuarioConContraseñaYnombreCambiado = Usuario.CambiarUsuarioYContraseña(nuevoUsuarioIngresado, nuevaContraseñaIngresada, nombreUsuarioActual);
+            IOperacionesUsuario operacionesUsuario = new Usuario();
+            bool usuarioConContraseñaYnombreCambiado = operacionesUsuario.CambiarUsuarioYContraseña(nuevoUsuarioIngresado, nuevaContraseñaIngresada, nombreUsuarioActual);
 
             if (usuarioConContraseñaYnombreCambiado == true)
             {

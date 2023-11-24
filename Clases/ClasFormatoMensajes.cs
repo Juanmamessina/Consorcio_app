@@ -9,7 +9,7 @@
         public override string ToString()
         {
             // asi se va a ver en el listBox
-            return $"{Autor} - {Fecha.ToString("yyyy-MM-dd HH:mm")} - {Contenido}";
+            return $"{Fecha.ToString("yyyy-MM-dd HH:mm")} - {Contenido}";
         }
     }
 }

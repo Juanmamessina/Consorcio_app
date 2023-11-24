@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\AppConsorcio.csproj": {}
+    "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Consorcio_app\\AppConsorcio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Clases\\Clases.csproj": {
+    "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Clases\\Clases.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Clases\\Clases.csproj",
+        "projectUniqueName": "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Clases\\Clases.csproj",
         "projectName": "Clases",
-        "projectPath": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Clases\\Clases.csproj",
+        "projectPath": "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Clases\\Clases.csproj",
         "packagesPath": "C:\\Users\\Juanma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Clases\\obj\\",
+        "outputPath": "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Clases\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Juanma\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -65,14 +65,14 @@
         }
       }
     },
-    "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\AppConsorcio.csproj": {
+    "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Consorcio_app\\AppConsorcio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\AppConsorcio.csproj",
+        "projectUniqueName": "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Consorcio_app\\AppConsorcio.csproj",
         "projectName": "AppConsorcio",
-        "projectPath": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\AppConsorcio.csproj",
+        "projectPath": "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Consorcio_app\\AppConsorcio.csproj",
         "packagesPath": "C:\\Users\\Juanma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\obj\\",
+        "outputPath": "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Consorcio_app\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Juanma\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -89,11 +89,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Clases\\Clases.csproj": {
-                "projectPath": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Clases\\Clases.csproj"
-              },
-              "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Logica\\Logica.csproj": {
-                "projectPath": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Logica\\Logica.csproj"
+              "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Clases\\Clases.csproj": {
+                "projectPath": "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Clases\\Clases.csproj"
               }
             }
           }
@@ -117,68 +114,6 @@
               "version": "[13.0.3, )"
             }
           },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            },
-            "Microsoft.WindowsDesktop.App.WindowsForms": {
-              "privateAssets": "none"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Logica\\Logica.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Logica\\Logica.csproj",
-        "projectName": "Logica",
-        "projectPath": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Logica\\Logica.csproj",
-        "packagesPath": "C:\\Users\\Juanma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Logica\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\Juanma\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0-windows"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0-windows7.0": {
-            "targetAlias": "net6.0-windows",
-            "projectReferences": {
-              "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Clases\\Clases.csproj": {
-                "projectPath": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Clases\\Clases.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0-windows7.0": {
-          "targetAlias": "net6.0-windows",
           "imports": [
             "net461",
             "net462",

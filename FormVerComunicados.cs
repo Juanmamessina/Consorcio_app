@@ -27,8 +27,8 @@ namespace AppConsorcio
             this.Close();
 
             // Crea una instancia del formulario de menú y lo muestra
-            Menu formMenu = new Menu();
-            formMenu.Show();
+            MDImenu menu = new MDImenu();
+            menu.Show();
         }
 
 
@@ -53,6 +53,6 @@ namespace AppConsorcio
             }
         }
 
-
+        
     }
 }

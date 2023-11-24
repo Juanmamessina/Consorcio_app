@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Clases;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -34,7 +35,8 @@ namespace AppConsorcio
         {
             string contenido = txtContenidoReclamo.Text.Trim();
 
-            bool reclamoPublicado = Usuario.PublicarReclamo(contenido, nombreUsuarioActual);
+            IOperacionesUsuario operacionesUsuario = new Usuario();
+            bool reclamoPublicado = operacionesUsuario.PublicarReclamo(contenido, nombreUsuarioActual);
 
             if(reclamoPublicado == true)
             {

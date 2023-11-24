@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pceFPHJimQC0TsanLu+tPVHS5bjEI+Owf2fH1Uyo0Fm6yshZeQTMwKPbf6t51v3+t0lfmSB2ToLk9LP9vQH3dA==",
+  "dgSpecHash": "P26ZTdIaat+950MaA+TlYj8vNkxrjAkLysy353YrpNmhLS0RGuZ3dPKBJWSiqV0lLDxk5pNSf6yBb5wMxw7C8w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\AppConsorcio.csproj",
+  "projectFilePath": "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Consorcio_app\\AppConsorcio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Juanma\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\Juanma\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",

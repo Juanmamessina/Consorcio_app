@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Gh1JtkQouYoWVXKV8/AOotAjszSeehHouUAh5QtMdZ+9eIE/Io/YXkgkxUmMleJP8j4TzcJTS161UJ8azrgApA==",
+  "dgSpecHash": "uO8novlV/djclzNPhR6kF9pNdKEX+Rw7YIn29ph9zqK8OKUrvdxjVGcHgxMGmvEFydUluFFZcHUAY4wVG5Exaw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Clases\\Clases.csproj",
+  "projectFilePath": "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Clases\\Clases.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Juanma\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],

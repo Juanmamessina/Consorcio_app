@@ -568,22 +568,6 @@
         "runtime": {
           "bin/placeholder/Clases.dll": {}
         }
-      },
-      "Logica/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "Clases": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Logica.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Logica.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.WindowsDesktop.App.WindowsForms"
-        ]
       }
     }
   },
@@ -1861,17 +1845,11 @@
       "type": "project",
       "path": "../Clases/Clases.csproj",
       "msbuildProject": "../Clases/Clases.csproj"
-    },
-    "Logica/1.0.0": {
-      "type": "project",
-      "path": "../Logica/Logica.csproj",
-      "msbuildProject": "../Logica/Logica.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "Clases >= 1.0.0",
-      "Logica >= 1.0.0",
       "MySql.Data >= 8.2.0",
       "Newtonsoft.Json >= 13.0.3"
     ]
@@ -1882,11 +1860,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\AppConsorcio.csproj",
+      "projectUniqueName": "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Consorcio_app\\AppConsorcio.csproj",
       "projectName": "AppConsorcio",
-      "projectPath": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\AppConsorcio.csproj",
+      "projectPath": "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Consorcio_app\\AppConsorcio.csproj",
       "packagesPath": "C:\\Users\\Juanma\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\obj\\",
+      "outputPath": "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Consorcio_app\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Juanma\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1903,11 +1881,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Clases\\Clases.csproj": {
-              "projectPath": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Clases\\Clases.csproj"
-            },
-            "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Logica\\Logica.csproj": {
-              "projectPath": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Logica\\Logica.csproj"
+            "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Clases\\Clases.csproj": {
+              "projectPath": "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Clases\\Clases.csproj"
             }
           }
         }
