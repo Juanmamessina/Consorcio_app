@@ -99,7 +99,7 @@ namespace AppConsorcio
                     MessageBox.Show("Usuario o contraseña incorrectos");
                     return; // volver a preguntar
                 }
-                else
+                else if (usuarioValidado == true && usuarioIngresado != "admin")
                 {
                     NombreUsuarioActual = usuarioIngresado;
                     MessageBox.Show("El ingreso fue exitoso");

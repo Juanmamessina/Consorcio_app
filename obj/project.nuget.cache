@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "P26ZTdIaat+950MaA+TlYj8vNkxrjAkLysy353YrpNmhLS0RGuZ3dPKBJWSiqV0lLDxk5pNSf6yBb5wMxw7C8w==",
+=======
+  "dgSpecHash": "x4u/uZz9mCdLZaZ7YtGa0eUenJJyUSfA26DwKl8NC1RwGiqTX/iGc0DslDGE2VMw72AzFr05s0ektKq6HZQIeg==",
+>>>>>>> 72c61e15f852e75990e81de1c8342bf39bbad475
   "success": true,
   "projectFilePath": "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Consorcio_app\\AppConsorcio.csproj",
   "expectedPackageFiles": [

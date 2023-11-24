@@ -1881,8 +1881,13 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
+<<<<<<< HEAD
             "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Clases\\Clases.csproj": {
               "projectPath": "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Clases\\Clases.csproj"
+=======
+            "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Clases\\Clases.csproj": {
+              "projectPath": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Clases\\Clases.csproj"
+>>>>>>> 72c61e15f852e75990e81de1c8342bf39bbad475
             }
           }
         }

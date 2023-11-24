@@ -68,6 +68,7 @@ C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\bin\Debug\net6.0-windows
 C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\bin\Debug\net6.0-windows\runtimes\win-x64\native\krb5_64.dll
 C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\bin\Debug\net6.0-windows\runtimes\win-x64\native\krbcc64.dll
 C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+<<<<<<< HEAD
 C:\Users\Juanma\Desktop\consorcioConMDI\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.dll
 C:\Users\Juanma\Desktop\consorcioConMDI\Consorcio_app\obj\Debug\net6.0-windows\refint\AppConsorcio.dll
 C:\Users\Juanma\Desktop\consorcioConMDI\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.pdb
@@ -121,3 +122,6 @@ C:\Users\Juanma\Desktop\consorcioConMDI\Consorcio_app\obj\Debug\net6.0-windows\A
 C:\Users\Juanma\Desktop\consorcioConMDI\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.genruntimeconfig.cache
 C:\Users\Juanma\Desktop\consorcioConMDI\Consorcio_app\obj\Debug\net6.0-windows\ref\AppConsorcio.dll
 C:\Users\Juanma\Desktop\consorcioConMDI\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.MDImenu.resources
+=======
+C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.MDImenu.resources
+>>>>>>> 72c61e15f852e75990e81de1c8342bf39bbad475
