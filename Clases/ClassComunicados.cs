@@ -8,7 +8,7 @@ namespace AppConsorcio
 {
     public class Comunicado : FormatoMensajes
     {
-       
+        
     }
 
 

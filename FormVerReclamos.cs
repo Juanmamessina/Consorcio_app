@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using System.IO;
+using System.Runtime.Serialization;
+using Clases;
 
 namespace AppConsorcio
 {
@@ -32,30 +34,28 @@ namespace AppConsorcio
 
         private void MostrarReclamos()
         {
-            if (File.Exists("reclamos.json"))
+
+            string path = "reclamos.json";
+
+            if (File.Exists(path))
             {
-                string json = File.ReadAllText("reclamos.json");
+                
 
-                // Deserializar en un Dictionary
-                Dictionary<string, List<Reclamo>> reclamosDict = JsonConvert.DeserializeObject<Dictionary<string, List<Reclamo>>>(json);
+                // Deserializar en una lista de Reclamo
+                ISerializable<Reclamo> serializableReclamos = new SerializadoraJSON<Reclamo>(path);
+                List<Reclamo> listaReclamos = serializableReclamos.Deserializar();
 
-                rtbReclamos.Clear();
-
-                // Puedes iterar sobre el diccionario y trabajar con cada autor y sus reclamos
-                foreach (var kvp in reclamosDict)
+                if (listaReclamos != null && listaReclamos.Any())
                 {
-                    string autor = kvp.Key;
-                    List<Reclamo> reclamos = kvp.Value;
-
-                    rtbReclamos.AppendText($"Autor: {autor}" + Environment.NewLine);
-
-                    // Itera sobre los reclamos del autor
-                    foreach (var reclamo in reclamos)
+                    foreach (var reclamo in listaReclamos)
                     {
-                        // Usa el método ToString personalizado para formatear el reclamo
                         string reclamoFormateado = reclamo.ToString();
-                        rtbReclamos.AppendText($"  {reclamoFormateado}" + Environment.NewLine);
+                        rtbReclamos.AppendText($"{reclamoFormateado}" + Environment.NewLine);
                     }
+                }
+                else
+                {
+                    rtbReclamos.AppendText("No hay reclamos disponibles." + Environment.NewLine);
                 }
 
                 rtbReclamos.Visible = true;
@@ -66,6 +66,7 @@ namespace AppConsorcio
                 rtbReclamos.Visible = true;
             }
         }
+
 
 
 

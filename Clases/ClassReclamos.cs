@@ -9,5 +9,6 @@ namespace AppConsorcio
     public class Reclamo : FormatoMensajes
     {
         
+
     }
 }

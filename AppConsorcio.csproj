@@ -20,6 +20,7 @@
   <ItemGroup>
     <PackageReference Include="MySql.Data" Version="8.2.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Runtime.Serialization.Formatters" Version="4.3.0" />
   </ItemGroup>
 
   <ItemGroup>
