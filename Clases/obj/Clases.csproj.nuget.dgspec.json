@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Clases\\Clases.csproj": {}
+    "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Clases\\Clases.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Clases\\Clases.csproj": {
+    "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Clases\\Clases.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Clases\\Clases.csproj",
+        "projectUniqueName": "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Clases\\Clases.csproj",
         "projectName": "Clases",
-        "projectPath": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Clases\\Clases.csproj",
+        "projectPath": "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Clases\\Clases.csproj",
         "packagesPath": "C:\\Users\\Juanma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Clases\\obj\\",
+        "outputPath": "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Clases\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Juanma\\AppData\\Roaming\\NuGet\\NuGet.Config",
