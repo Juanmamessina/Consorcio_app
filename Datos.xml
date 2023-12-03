@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<usuarios>
-  <usuario>
-    <nombre>admin</nombre>
-    <contraseña>a</contraseña>
-  </usuario>
-  <usuario>
-    <nombre>juanma</nombre>
-    <contraseña>messina</contraseña>
-  </usuario>
-  <usuario>
-    <nombre>t</nombre>
-    <contraseña>c</contraseña>
-  </usuario>
-</usuarios>
+<usuarioNuevo>
+  <Usuario>
+    <Nombre>admin</Nombre>
+    <Contraseña>a</Contraseña>
+  </Usuario>
+  <Usuario>
+    <Nombre>juanma</Nombre>
+    <Contraseña>messina</Contraseña>
+  </Usuario>
+  <Usuario>
+    <Nombre>t</Nombre>
+    <Contraseña>c</Contraseña>
+  </Usuario>
+</usuarioNuevo>

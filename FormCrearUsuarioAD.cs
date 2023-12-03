@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using ClasesApp;
+
 
 namespace AppConsorcio
 {
@@ -31,8 +33,9 @@ namespace AppConsorcio
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void btnCrearUsuario_Click(object sender, EventArgs e)
+        public void btnCrearUsuario_Click(object sender, EventArgs e)
         {
+            string path = "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\Datos.xml";
             string nombreUsuarioNuevo = txtNombreUsuarioNuevo.Text;
             string contraseñaUsuarioNuevo = txtContraseñaUsuarioNuevo.Text;
 
@@ -43,20 +46,23 @@ namespace AppConsorcio
             }
 
             // Crear una instancia de la clase Usuario con los datos ingresados
-            Usuario usuarioNuevo = new Usuario
-            {
-                Nombre = nombreUsuarioNuevo,
-                Contraseña = contraseñaUsuarioNuevo,
-            };
+            Usuario usuarioNuevo = new Usuario();
+            
+            usuarioNuevo.Nombre = nombreUsuarioNuevo;
+            usuarioNuevo.Contraseña = contraseñaUsuarioNuevo;
 
-            XDocument xmlDoc = XDocument.Load("C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\Datos.xml");
 
-            XElement usuarioElement = new XElement("usuario",
-                new XElement("nombre", usuarioNuevo.Nombre),
-                new XElement("contraseña", usuarioNuevo.Contraseña));
+            // Serializar el nuevo usuario
+            SerializadoraXML<Usuario> serializadora = new SerializadoraXML<Usuario>(path);
+            serializadora.Serializar(usuarioNuevo);
+            //XDocument xmlDoc = XDocument.Load("C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\Datos.xml");
 
-            xmlDoc.Element("usuarios").Add(usuarioElement);
-            xmlDoc.Save("C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\Datos.xml");
+            //XElement usuarioElement = new XElement("usuario",
+            //    new XElement("nombre", usuarioNuevo.Nombre),
+            //    new XElement("contraseña", usuarioNuevo.Contraseña));
+
+            //xmlDoc.Element("usuarios").Add(usuarioElement);
+            //xmlDoc.Save("C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\Datos.xml");
 
             MessageBox.Show("Nuevo usuario creado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

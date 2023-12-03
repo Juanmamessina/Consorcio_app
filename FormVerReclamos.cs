@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using Newtonsoft.Json;
 using System.IO;
 using System.Runtime.Serialization;
-using Clases;
+using ClasesApp;
 
 namespace AppConsorcio
 {

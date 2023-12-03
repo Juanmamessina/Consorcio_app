@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Consorcio_app\\AppConsorcio.csproj": {}
+    "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\AppConsorcio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Clases\\Clases.csproj": {
+    "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\ClasesApp\\ClasesApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Clases\\Clases.csproj",
-        "projectName": "Clases",
-        "projectPath": "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Clases\\Clases.csproj",
+        "projectUniqueName": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\ClasesApp\\ClasesApp.csproj",
+        "projectName": "ClasesApp",
+        "projectPath": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\ClasesApp\\ClasesApp.csproj",
         "packagesPath": "C:\\Users\\Juanma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Clases\\obj\\",
+        "outputPath": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\ClasesApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Juanma\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,6 +43,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "System.Xml.XmlSerializer": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             }
           },
           "imports": [
@@ -65,14 +69,14 @@
         }
       }
     },
-    "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Consorcio_app\\AppConsorcio.csproj": {
+    "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\AppConsorcio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Consorcio_app\\AppConsorcio.csproj",
+        "projectUniqueName": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\AppConsorcio.csproj",
         "projectName": "AppConsorcio",
-        "projectPath": "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Consorcio_app\\AppConsorcio.csproj",
+        "projectPath": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\AppConsorcio.csproj",
         "packagesPath": "C:\\Users\\Juanma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Consorcio_app\\obj\\",
+        "outputPath": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Juanma\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -89,13 +93,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-<<<<<<< HEAD
-              "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Clases\\Clases.csproj": {
-                "projectPath": "C:\\Users\\Juanma\\Desktop\\consorcioConMDI\\Clases\\Clases.csproj"
-=======
-              "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Clases\\Clases.csproj": {
-                "projectPath": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Clases\\Clases.csproj"
->>>>>>> 72c61e15f852e75990e81de1c8342bf39bbad475
+              "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\ClasesApp\\ClasesApp.csproj": {
+                "projectPath": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\ClasesApp\\ClasesApp.csproj"
               }
             }
           }

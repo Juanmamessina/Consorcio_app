@@ -1,4 +1,4 @@
-﻿using Clases;
+﻿using ClasesApp;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -7,6 +7,7 @@ using System.Windows.Forms;
 
 namespace AppConsorcio
 {
+
     public partial class FormHacerReclamo : Form
     {
         private List<Reclamo> reclamosList = new List<Reclamo>();

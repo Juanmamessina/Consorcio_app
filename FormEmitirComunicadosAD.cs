@@ -4,13 +4,13 @@ using System.Windows.Forms;
 using Newtonsoft.Json;
 using System.IO;
 using AppConsorcio;
-
+using ClasesApp;
 
 namespace AppConsorcio
 {
-    public partial class FormEmitirComunicadosAD : Form
+    public partial class FormEmitirComunicadosAD : Form 
     {
-        private List<Comunicado> comunicadosList = new List<Comunicado>();
+        
 
         public FormEmitirComunicadosAD()
         {
@@ -32,6 +32,7 @@ namespace AppConsorcio
         private void btnPublicarComunicado_Click(object sender, EventArgs e)
         {
             string contenido = txtContenido.Text.Trim();
+            string path = "comunicados.json";
 
             if (string.IsNullOrEmpty(contenido))
             {
@@ -39,11 +40,17 @@ namespace AppConsorcio
                 return;
             }
 
+            List<Comunicado> comunicadosList;
+
             // Cargar la lista de comunicados existente desde el archivo JSON
-            if (File.Exists("comunicados.json"))
+            if (File.Exists(path))
             {
-                string json = File.ReadAllText("comunicados.json");
-                comunicadosList = JsonConvert.DeserializeObject<List<Comunicado>>(json);
+                ISerializable<Comunicado> serializableComunicados = new SerializadoraJSON<Comunicado>(path);
+                comunicadosList = serializableComunicados.Deserializar();
+            }
+            else
+            {
+                comunicadosList = new List<Comunicado>();
             }
 
             // Crear un nuevo comunicado
@@ -60,10 +67,9 @@ namespace AppConsorcio
             try
             {
                 // Guardar la lista completa de comunicados en el archivo JSON
-                string json = JsonConvert.SerializeObject(comunicadosList);
-                File.WriteAllText("comunicados.json", json);
+                ISerializable<Comunicado> serializableComunicado = new SerializadoraJSON<Comunicado>(path);
+                serializableComunicado.Serializar(comunicadosList);
 
-                // Limpiar los campos de entrada
                 txtContenido.Clear();
 
                 MessageBox.Show("El comunicado fue publicado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -73,6 +79,7 @@ namespace AppConsorcio
                 MessageBox.Show("Ocurrió un error al guardar el comunicado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
 
     }

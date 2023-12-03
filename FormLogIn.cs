@@ -7,7 +7,7 @@ using System.Xml.Linq;
 using AppConsorcio;
 using System.Security.Cryptography.X509Certificates;
 using System.Xml;
-using Clases;
+using ClasesApp;
 
 namespace AppConsorcio
 {
@@ -17,6 +17,7 @@ namespace AppConsorcio
         {
             InitializeComponent();
         }
+
         public static string NombreUsuarioActual { get; private set; }
 
         //para poder arrastrar el form
@@ -88,7 +89,7 @@ namespace AppConsorcio
             string contraseñaIngresada = txtContraseña.Text;
 
 
-            IOperacionesUsuario operacionesUsuario = new Usuario();
+            IOperacionesUsuario operacionesUsuario = new MetodosUsuario();
             bool usuarioValidado = operacionesUsuario.ValidarUsuario(usuarioIngresado, contraseñaIngresada);
 
 

@@ -1,5 +1,5 @@
 ﻿using AppConsorcio;
-using Clases;
+using ClasesApp;
 using System;
 using System.ComponentModel;
 using System.Data;
