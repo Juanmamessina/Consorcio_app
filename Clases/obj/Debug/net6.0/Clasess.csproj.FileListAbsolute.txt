@@ -1,0 +1,4 @@
+C:\Users\Juanma\Desktop\AppConsorcioFinal\Clasess\obj\Debug\net6.0\Clasess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Juanma\Desktop\AppConsorcioFinal\Clasess\obj\Debug\net6.0\Clasess.AssemblyInfoInputs.cache
+C:\Users\Juanma\Desktop\AppConsorcioFinal\Clasess\obj\Debug\net6.0\Clasess.AssemblyInfo.cs
+C:\Users\Juanma\Desktop\AppConsorcioFinal\Clasess\obj\Debug\net6.0\Clasess.csproj.CoreCompileInputs.cache

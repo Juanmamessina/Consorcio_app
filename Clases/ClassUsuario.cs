@@ -1,4 +1,6 @@
-﻿using System.Xml.Linq;
+﻿using System.IO;
+using System.Runtime.Serialization;
+using System.Xml.Linq;
 using System.Xml.Serialization;
 using Clases;
 using Newtonsoft.Json;
@@ -10,7 +12,7 @@ namespace AppConsorcio
 {
     [Serializable]
     [XmlRoot("usuarios")]
-    public class Usuario : IOperacionesUsuario
+    public class Usuario : IOperacionesUsuario, ISerializable
     {
         private string nombre;
         private string contraseña;
@@ -42,24 +44,14 @@ namespace AppConsorcio
             else
             {
                 // Cargar y analizar el archivo XML
-                string xmlFilePath = "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\Datos.xml";
+                string path = "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\Datos.xml";
 
-                XDocument xmlDoc = XDocument.Load(xmlFilePath);
+                ISerializable<Usuario> serializableUsuarios = new SerializadoraXML<Usuario>(path);
 
-                // Obtener la lista de usuarios del XML
-                List<Usuario> usuarios = new List<Usuario>();
-
-                foreach (var usuarioElement in xmlDoc.Root.Elements("usuario"))
-                {
-                    string nombreXML = usuarioElement.Element("nombre").Value;
-                    string contraseñaXML = usuarioElement.Element("contraseña").Value;
-
-                    usuarios.Add(new Usuario { Nombre = nombreXML, Contraseña = contraseñaXML });
-                }
+                // Deserializar la lista de usuarios del archivo XML
+                List<Usuario> usuarios = serializableUsuarios.Deserializar();
 
                 // Verificar si el usuario y la contraseña coinciden con los registros en el XML
-
-
                 foreach (var usuario in usuarios)
                 {
                     if (usuario.Nombre == nombre && usuario.Contraseña == contraseña)
@@ -68,7 +60,6 @@ namespace AppConsorcio
                         break;
                     }
                 }
-
             }
             return usuarioValido;
         }
@@ -134,39 +125,73 @@ namespace AppConsorcio
                 return false;
             }
 
-            Dictionary<string, List<Reclamo>> reclamosDict = new Dictionary<string, List<Reclamo>>();
+            string path = "reclamos.json";
+          
 
-            // Cargar el diccionario de reclamos existente desde el archivo JSON
-            if (File.Exists("reclamos.json"))
+            // Verificar si el archivo existe
+            if (File.Exists(path))
             {
-                string json = File.ReadAllText("reclamos.json");
-                reclamosDict = JsonConvert.DeserializeObject<Dictionary<string, List<Reclamo>>>(json);
+                // Cargar la lista de reclamos existente desde el archivo JSON
+                ISerializable<Reclamo> serializableReclamos = new SerializadoraJSON<Reclamo>(path);
+                List<Reclamo> listaReclamos = serializableReclamos.Deserializar();
+
+                // Crear un nuevo reclamo
+                Reclamo nuevoReclamo = new Reclamo
+                {
+                    Contenido = contenido,
+                    Autor = nombreUsuarioActual,
+                    Fecha = DateTime.Now,
+                };
+
+
+                listaReclamos.Add(nuevoReclamo);
+
+
+                try
+                {
+                    ISerializable<Reclamo> serializableReclamo = new SerializadoraJSON<Reclamo>(path);
+                    serializableReclamo.Serializar(listaReclamos);
+
+                    return true; // Devuelvo true para indicar que el reclamo se publicó con éxito
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error al escribir el archivo JSON: {ex.Message}");
+                    return false;
+                }
             }
-
-            // Crear un nuevo reclamo
-            Reclamo nuevoReclamo = new Reclamo
+            else
             {
-                Contenido = contenido,
-                Fecha = DateTime.Now,
-            };
+                // Si el archivo no existe, crear uno nuevo con el reclamo actual
+                List<Reclamo> listaReclamos = new List<Reclamo>();
+                Reclamo nuevoReclamo = new Reclamo
+                {
+                    Contenido = contenido,
+                    Autor = nombreUsuarioActual,
+                    Fecha = DateTime.Now,
+                };
+                listaReclamos.Add(nuevoReclamo);
 
-            // Agregar el nuevo reclamo a la lista de reclamos del usuario actual
-            if (!reclamosDict.ContainsKey(nombreUsuarioActual))
-            {
-                reclamosDict[nombreUsuarioActual] = new List<Reclamo>();
+                try
+                {
+                    // Guardar la lista de reclamos en el nuevo archivo JSON
+                    ISerializable<Reclamo> serializableReclamos = new SerializadoraJSON<Reclamo>(path);
+                    serializableReclamos.Serializar(listaReclamos);
+                    return true; // Devuelvo true para indicar que el reclamo se publicó con éxito
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error al escribir el archivo JSON: {ex.Message}");
+                    return false;
+                }
             }
-            reclamosDict[nombreUsuarioActual].Add(nuevoReclamo);
-
-            // Guardar el diccionario completo de reclamos en el archivo JSON
-            string jsonUpdated = JsonConvert.SerializeObject(reclamosDict);
-            File.WriteAllText("reclamos.json", jsonUpdated);
-
-            return true; // Devuelvo true para indicar que el reclamo se publicó con éxito
         }
 
 
-
-
+        public void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            throw new NotImplementedException();
+        }
     }
 
 

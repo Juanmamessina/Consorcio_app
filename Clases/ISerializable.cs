@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AppConsorcio
+namespace Clases
 {
-    public class Reclamo : FormatoMensajes
+    public interface ISerializable<T>
     {
-        
-
+        bool Serializar(List<T> datos);
+        List<T> Deserializar();
     }
-}
+} 
