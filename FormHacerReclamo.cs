@@ -36,7 +36,7 @@ namespace AppConsorcio
         {
             string contenido = txtContenidoReclamo.Text.Trim();
 
-            IOperacionesUsuario operacionesUsuario = new Usuario();
+            IOperacionesUsuario operacionesUsuario = new MetodosUsuario();
             bool reclamoPublicado = operacionesUsuario.PublicarReclamo(contenido, nombreUsuarioActual);
 
             if(reclamoPublicado == true)

@@ -12,7 +12,7 @@ namespace ClasesApp
 {
     public class SerializadoraJSON<T> : Serializador, ISerializable<T>
     {
-
+        
         public SerializadoraJSON(string path) : base(path)
         {
 
@@ -34,7 +34,7 @@ namespace ClasesApp
             return lista;
         }
 
-        public bool Serializar(T datos)
+        public bool Serializar(List<T> datos)
         {
             try
             {

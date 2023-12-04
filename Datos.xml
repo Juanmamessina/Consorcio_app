@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<usuarioNuevo>
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfUsuario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Usuario>
     <Nombre>admin</Nombre>
     <Contraseña>a</Contraseña>
@@ -12,4 +12,8 @@
     <Nombre>t</Nombre>
     <Contraseña>c</Contraseña>
   </Usuario>
-</usuarioNuevo>
+  <Usuario>
+    <Nombre>n</Nombre>
+    <Contraseña>m</Contraseña>
+  </Usuario>
+</ArrayOfUsuario>

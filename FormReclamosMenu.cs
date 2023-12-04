@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO; 
 using System.Windows.Forms;
+using ClasesApp;
 
 namespace AppConsorcio
 {
@@ -14,8 +15,6 @@ namespace AppConsorcio
         {
             InitializeComponent();
         }
-
-
 
         private void picMinimizar_Click(object sender, EventArgs e)
         {

@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace ClasesApp
 {
-    public class Serializador
+    public abstract class Serializador
     {
+        public Serializador()
+        {
+            
+        }
         public string Path { get; set; }
 
         public Serializador(string path)

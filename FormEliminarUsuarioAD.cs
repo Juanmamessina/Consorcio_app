@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClasesApp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,13 +42,15 @@ namespace AppConsorcio
                 return;
             }
 
-            // Cargar y analizar el archivo XML
-            string xmlFilePath = "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\Datos.xml";
-            XDocument xmlDoc = XDocument.Load(xmlFilePath);
+            // Ruta del archivo XML
+            string path = "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\Datos.xml";
 
-            // Buscar el usuario en el archivo XML
-            XElement usuarioAEliminar = xmlDoc.Root.Elements("usuario")
-                .FirstOrDefault(u => u.Element("nombre").Value == nombreUsuarioAEliminar);
+            // Deserializar la lista actual de usuarios
+            SerializadoraXML<Usuario> serializadora = new SerializadoraXML<Usuario>(path);
+            List<Usuario> usuarios = serializadora.Deserializar();
+
+            // Buscar el usuario en la lista
+            Usuario usuarioAEliminar = usuarios.FirstOrDefault(u => u.Nombre == nombreUsuarioAEliminar);
 
             if (usuarioAEliminar != null)
             {
@@ -57,9 +60,11 @@ namespace AppConsorcio
 
                 if (result == DialogResult.Yes)
                 {
-                    // Eliminar el usuario del archivo XML
-                    usuarioAEliminar.Remove();
-                    xmlDoc.Save(xmlFilePath);
+                    // Eliminar el usuario de la lista
+                    usuarios.Remove(usuarioAEliminar);
+
+                    // Serializar la lista actualizada de usuarios al archivo XML
+                    serializadora.Serializar(usuarios);
 
                     MessageBox.Show("El usuario ha sido eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -73,9 +78,10 @@ namespace AppConsorcio
             }
             else
             {
-                MessageBox.Show("El usuario especificado no fue encontrado en el archivo XML.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El usuario especificado no fue encontrado en la lista de usuarios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
     }
 }

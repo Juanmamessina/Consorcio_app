@@ -8,7 +8,7 @@ namespace ClasesApp
 {
     public interface ISerializable<T>
     {
-        bool Serializar(T datos);
+        bool Serializar(List<T> datos);
         List<T> Deserializar();
     }
 } 

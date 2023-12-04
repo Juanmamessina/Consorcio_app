@@ -10,14 +10,11 @@ namespace AppConsorcio
 {
     public partial class FormVerReclamos : Form
     {
-        
-
         public FormVerReclamos()
         {
             InitializeComponent();
             MostrarReclamos();
         }
-
 
         private void picMinimizar_Click_1(object sender, EventArgs e)
         {

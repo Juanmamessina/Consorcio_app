@@ -46,23 +46,19 @@ namespace AppConsorcio
             }
 
             // Crear una instancia de la clase Usuario con los datos ingresados
-            Usuario usuarioNuevo = new Usuario();
-            
+            UsuarioPadre usuarioNuevo = new Usuario();
             usuarioNuevo.Nombre = nombreUsuarioNuevo;
             usuarioNuevo.Contraseña = contraseñaUsuarioNuevo;
 
-
-            // Serializar el nuevo usuario
+            // Deserializar la lista actual de usuarios
             SerializadoraXML<Usuario> serializadora = new SerializadoraXML<Usuario>(path);
-            serializadora.Serializar(usuarioNuevo);
-            //XDocument xmlDoc = XDocument.Load("C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\Datos.xml");
+            List<Usuario> usuarios = serializadora.Deserializar();
 
-            //XElement usuarioElement = new XElement("usuario",
-            //    new XElement("nombre", usuarioNuevo.Nombre),
-            //    new XElement("contraseña", usuarioNuevo.Contraseña));
+            // Agregar el nuevo usuario a la lista
+            usuarios.Add((Usuario)usuarioNuevo);
 
-            //xmlDoc.Element("usuarios").Add(usuarioElement);
-            //xmlDoc.Save("C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\Datos.xml");
+            // Serializar la lista actualizada de usuarios al archivo XML
+            serializadora.Serializar(usuarios);
 
             MessageBox.Show("Nuevo usuario creado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -70,6 +66,7 @@ namespace AppConsorcio
             txtNombreUsuarioNuevo.Clear();
             txtContraseñaUsuarioNuevo.Clear();
         }
+
 
 
     }

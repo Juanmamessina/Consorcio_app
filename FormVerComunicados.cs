@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using System.IO;
+using ClasesApp;
 
 namespace AppConsorcio
 {
@@ -34,10 +35,15 @@ namespace AppConsorcio
 
         private void MostrarComunicados()
         {
-            if (File.Exists("comunicados.json"))
+            // Ruta del archivo JSON
+            string path = "comunicados.json";
+
+            // Verificar si el archivo JSON existe
+            if (File.Exists(path))
             {
-                string json = File.ReadAllText("comunicados.json");
-                comunicadosList = JsonConvert.DeserializeObject<List<Comunicado>>(json);
+                // Deserializar la lista de comunicados utilizando tu serializadora
+                SerializadoraJSON<Comunicado> serializadora = new SerializadoraJSON<Comunicado>(path);
+                List<Comunicado> comunicadosList = serializadora.Deserializar();
 
                 // Limpia el RichTextBox antes de mostrar los mensajes
                 rtbComunicados.Clear();
@@ -53,6 +59,6 @@ namespace AppConsorcio
             }
         }
 
-        
+
     }
 }

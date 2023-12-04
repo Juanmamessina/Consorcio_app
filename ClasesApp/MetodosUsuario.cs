@@ -1,6 +1,7 @@
-﻿using AppConsorcio;
+﻿
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -24,6 +25,7 @@ namespace ClasesApp
             if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(contraseña))
             {
                 usuarioValido = false;
+                
             }
             else
             {
@@ -34,14 +36,17 @@ namespace ClasesApp
 
                 // Deserializar la lista de usuarios del archivo XML
                 List<Usuario> usuarios = serializableUsuarios.Deserializar();
-
+                
                 // Verificar si el usuario y la contraseña coinciden con los registros en el XML
                 foreach (var usuario in usuarios)
                 {
-                    if (usuario.Nombre == nombre && usuario.Contraseña == contraseña)
+                    //if (usuario == typeof(Usuario))
                     {
-                        usuarioValido = true;
-                        break;
+                        if (usuario.Nombre == nombre && usuario.Contraseña == contraseña)
+                        {
+                            usuarioValido = true;
+                            break;
+                        }
                     }
                 }
             }
@@ -51,47 +56,30 @@ namespace ClasesApp
 
         public bool CambiarUsuarioYContraseña(string nuevoUsuarioIngresado, string nuevaContraseñaIngresada, string nombreUsuarioActual)
         {
-            // Valido que las entradas no estén vacías
+            // Validar que las entradas no estén vacías
             if (string.IsNullOrWhiteSpace(nuevoUsuarioIngresado) || string.IsNullOrWhiteSpace(nuevaContraseñaIngresada))
             {
                 return false;
             }
 
             // Cargar y analizar el archivo XML
-            string xmlFilePath = "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\Datos.xml";
+            string path = "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\Datos.xml";
+            ISerializable<Usuario> serializableUsuarios = new SerializadoraXML<Usuario>(path);
 
-            XDocument xmlDoc = XDocument.Load(xmlFilePath);
+            // Deserializar la lista de usuarios del archivo XML
+            List<Usuario> usuarios = serializableUsuarios.Deserializar();
 
-            // Obtener la lista de usuarios del XML
-            List<Usuario> usuarios = new List<Usuario>();
-
-            foreach (Usuario usuario in usuarios)
-            {
-                string nombre = usuario.Nombre;
-                string contraseña = usuario.Contraseña;
-
-                usuarios.Add(new Usuario { Nombre = nombre, Contraseña = contraseña });
-            }
-
-            // Encuentra y modifica al usuario actual
+            // Encontrar y modificar al usuario actual
             Usuario usuarioActual = usuarios.Find(u => u.Nombre == nombreUsuarioActual);
-            Console.WriteLine(usuarioActual);
+
             if (usuarioActual != null)
             {
-                // Modifica el nombre y la contraseña del usuario
+                // Modificar el nombre y la contraseña del usuario
                 usuarioActual.Nombre = nuevoUsuarioIngresado;
                 usuarioActual.Contraseña = nuevaContraseñaIngresada;
 
-                // Guarda la información actualizada en el archivo XML
-                xmlDoc.Root.Elements("usuario")
-                    .First(u => u.Element("nombre").Value == nombreUsuarioActual)
-                    .SetElementValue("nombre", nuevoUsuarioIngresado);
-
-                xmlDoc.Root.Elements("usuario")
-                    .First(u => u.Element("nombre").Value == nuevoUsuarioIngresado)
-                    .SetElementValue("contraseña", nuevaContraseñaIngresada);
-
-                xmlDoc.Save(xmlFilePath);
+                // Serializar la lista actualizada al archivo XML
+                serializableUsuarios.Serializar(usuarios);
 
                 return true;
             }
@@ -101,6 +89,7 @@ namespace ClasesApp
                 return false;
             }
         }
+
 
         public bool PublicarReclamo(string contenido, string nombreUsuarioActual)
         {

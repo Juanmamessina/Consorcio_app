@@ -1,4 +1,4 @@
-﻿namespace AppConsorcio
+﻿namespace ClasesApp
 {
     public class FormatoMensajes
     {

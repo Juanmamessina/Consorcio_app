@@ -13,9 +13,11 @@ namespace AppConsorcio
 {
     public partial class FormLogIn : Form
     {
+        UsuarioPadre admin;
         public FormLogIn()
         {
             InitializeComponent();
+            admin = new AdminHijo("ad","a");
         }
 
         public static string NombreUsuarioActual { get; private set; }
@@ -100,7 +102,7 @@ namespace AppConsorcio
                     MessageBox.Show("Usuario o contraseña incorrectos");
                     return; // volver a preguntar
                 }
-                else if (usuarioValidado == true && usuarioIngresado != "admin")
+                else if (usuarioValidado == true)
                 {
                     NombreUsuarioActual = usuarioIngresado;
                     MessageBox.Show("El ingreso fue exitoso");

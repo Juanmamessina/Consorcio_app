@@ -7,13 +7,16 @@ namespace ClasesApp
 {
     public class SerializadoraXML<T> : Serializador, ISerializable<T> where T : class
     {
-
+        public SerializadoraXML()
+        {
+            
+        }
         public SerializadoraXML(string path) : base(path)
         {
-
+            Path = path;
         }
 
-        public bool Serializar(T datos)
+        public bool Serializar(List <T> datos)
         {
             List<T> lista;
             if(File.Exists(Path))
@@ -25,7 +28,7 @@ namespace ClasesApp
                 lista = new List<T>();
             }
 
-            lista.Add(datos);
+            lista.AddRange(datos);
 
             using (StreamWriter stream = new StreamWriter(Path))
             {

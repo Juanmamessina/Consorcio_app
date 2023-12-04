@@ -41,7 +41,7 @@ namespace AppConsorcio
             string nuevoUsuarioIngresado = txtUsuarioNuevo.Text;
             string nuevaContraseñaIngresada = txtContraseñaNueva.Text;
 
-            IOperacionesUsuario operacionesUsuario = new Usuario();
+            IOperacionesUsuario operacionesUsuario = new MetodosUsuario();
             bool usuarioConContraseñaYnombreCambiado = operacionesUsuario.CambiarUsuarioYContraseña(nuevoUsuarioIngresado, nuevaContraseñaIngresada, nombreUsuarioActual);
 
             if (usuarioConContraseñaYnombreCambiado == true)
