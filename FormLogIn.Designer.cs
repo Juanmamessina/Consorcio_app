@@ -35,16 +35,19 @@
             lblContraseñaOlvidada = new LinkLabel();
             picCerrar = new PictureBox();
             picMinimizar = new PictureBox();
+            panel1 = new Panel();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)picCerrar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picMinimizar).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // txtUsuario
             // 
-            txtUsuario.BackColor = Color.Blue;
+            txtUsuario.BackColor = Color.Indigo;
             txtUsuario.BorderStyle = BorderStyle.None;
             txtUsuario.ForeColor = Color.Black;
-            txtUsuario.Location = new Point(237, 95);
+            txtUsuario.Location = new Point(351, 100);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.PlaceholderText = "Usuario";
             txtUsuario.Size = new Size(263, 16);
@@ -55,10 +58,10 @@
             // 
             // txtContraseña
             // 
-            txtContraseña.BackColor = Color.Blue;
+            txtContraseña.BackColor = Color.Indigo;
             txtContraseña.BorderStyle = BorderStyle.None;
             txtContraseña.ForeColor = Color.Black;
-            txtContraseña.Location = new Point(237, 135);
+            txtContraseña.Location = new Point(351, 136);
             txtContraseña.Name = "txtContraseña";
             txtContraseña.PasswordChar = '*';
             txtContraseña.PlaceholderText = "Contraseña";
@@ -68,7 +71,7 @@
             // 
             // button1
             // 
-            button1.BackColor = Color.Blue;
+            button1.BackColor = Color.Indigo;
             button1.BackgroundImageLayout = ImageLayout.None;
             button1.FlatAppearance.BorderColor = Color.Yellow;
             button1.FlatAppearance.BorderSize = 0;
@@ -76,7 +79,7 @@
             button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = Color.Black;
-            button1.Location = new Point(237, 178);
+            button1.Location = new Point(351, 175);
             button1.Name = "button1";
             button1.Size = new Size(263, 34);
             button1.TabIndex = 2;
@@ -87,8 +90,8 @@
             // lblContraseñaOlvidada
             // 
             lblContraseñaOlvidada.AutoSize = true;
-            lblContraseñaOlvidada.LinkColor = Color.Blue;
-            lblContraseñaOlvidada.Location = new Point(299, 239);
+            lblContraseñaOlvidada.LinkColor = Color.Indigo;
+            lblContraseñaOlvidada.Location = new Point(408, 235);
             lblContraseñaOlvidada.Name = "lblContraseñaOlvidada";
             lblContraseñaOlvidada.Size = new Size(157, 15);
             lblContraseñaOlvidada.TabIndex = 3;
@@ -115,6 +118,27 @@
             picMinimizar.TabStop = false;
             picMinimizar.Click += picMinimizar_Click;
             // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Indigo;
+            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.BackgroundImageLayout = ImageLayout.Center;
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(0, -4);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(258, 289);
+            panel1.TabIndex = 6;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Symbol", 18F, FontStyle.Italic, GraphicsUnit.Point);
+            label1.Location = new Point(43, 225);
+            label1.Name = "label1";
+            label1.Size = new Size(170, 32);
+            label1.TabIndex = 0;
+            label1.Text = "Consorcio App";
+            // 
             // FormLogIn
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -122,6 +146,7 @@
             BackColor = Color.Black;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(700, 284);
+            Controls.Add(panel1);
             Controls.Add(picMinimizar);
             Controls.Add(picCerrar);
             Controls.Add(lblContraseñaOlvidada);
@@ -136,6 +161,8 @@
             MouseDown += FormLogIn_MouseDown;
             ((System.ComponentModel.ISupportInitialize)picCerrar).EndInit();
             ((System.ComponentModel.ISupportInitialize)picMinimizar).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -146,6 +173,8 @@
         private LinkLabel lblContraseñaOlvidada;
         private PictureBox picCerrar;
         private PictureBox picMinimizar;
+        private Panel panel1;
+        private Label label1;
     }
 }
 #endregion

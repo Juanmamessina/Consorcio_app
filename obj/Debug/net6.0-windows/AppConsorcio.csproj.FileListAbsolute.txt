@@ -127,3 +127,15 @@ C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows
 >>>>>>> 72c61e15f852e75990e81de1c8342bf39bbad475
 C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\bin\Debug\net6.0-windows\ClasesApp.dll
 C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\bin\Debug\net6.0-windows\ClasesApp.pdb
+C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.MDIParent1.resources
+C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.Forms.FormComunicados.resources
+C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.Forms.FormConfiguracion.resources
+C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.Forms.FormEventos.resources
+C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.Forms.FormReclamos.resources
+C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.Forms.FormUsuario.resources
+C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.MainMenu.resources
+C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.Forms.Comunicados.resources
+C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.Forms.Configuracion.resources
+C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.Forms.Eventos.resources
+C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.Forms.Reclamos.resources
+C:\Users\Juanma\Desktop\AppConsorcioFinal\Consorcio_app\obj\Debug\net6.0-windows\AppConsorcio.Forms.Usuario.resources

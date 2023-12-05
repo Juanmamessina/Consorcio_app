@@ -1,12 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="FormCambiarUsuarioYContraseña.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="FormConfiguracionMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="FormCrearUsuarioAD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -19,28 +13,28 @@
     <Compile Update="FormLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormVerComunicados.cs">
+    <Compile Update="FormsUserNormales\Comunicados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormVerReclamos.cs">
+    <Compile Update="FormsUserNormales\Configuracion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="MDImenu.cs">
+    <Compile Update="FormsUserNormales\Eventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormsUserNormales\Reclamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormsUserNormales\Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="MenuAD.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormReclamosMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="FormEmitirComunicadosAD.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="FormHacerReclamo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

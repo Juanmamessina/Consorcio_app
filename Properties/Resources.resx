@@ -121,16 +121,25 @@
   <data name="render-3d-fondo-tecnologia-diseno-estructura-comunicaciones-red" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\render-3d-fondo-tecnologia-diseno-estructura-comunicaciones-red.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="fondo-cuadricula-digital-abstracto-negro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo-cuadricula-digital-abstracto-negro.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Close_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Close_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fondo-cuadricula-digital-abstracto-negro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fondo-cuadricula-digital-abstracto-negro.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Close_Icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Close_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logoFormsUsuariosNormales" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logoFormsUsuariosNormales.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fondo-borroso-oscuro-abstracto-textura-suave-degradado-color-brillante-brillante-sitio-web-patron-banner-h" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo-borroso-oscuro-abstracto-textura-suave-degradado-color-brillante-brillante-sitio-web-patron-banner-h.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Close_Icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Close_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cross" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cross.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

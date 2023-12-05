@@ -17,7 +17,7 @@ namespace AppConsorcio
         public FormLogIn()
         {
             InitializeComponent();
-            admin = new AdminHijo("ad","a");
+            admin = new AdminHijo("ad", "a");
         }
 
         public static string NombreUsuarioActual { get; private set; }
@@ -50,7 +50,7 @@ namespace AppConsorcio
             if (txtUsuario.Text == "")
             {
                 txtUsuario.Text = "Usuario";
-                txtUsuario.ForeColor = Color.Silver;
+                txtUsuario.ForeColor = Color.Black;
             }
         }
 
@@ -107,7 +107,7 @@ namespace AppConsorcio
                     NombreUsuarioActual = usuarioIngresado;
                     MessageBox.Show("El ingreso fue exitoso");
                     this.Close();
-                    MDImenu menu = new MDImenu();
+                    MainMenu menu = new MainMenu();
                     menu.Show();
                 }
 
@@ -143,5 +143,7 @@ namespace AppConsorcio
 
 
         }
+
+
     }
 }
