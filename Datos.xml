@@ -17,7 +17,7 @@
     <Contraseña>m</Contraseña>
   </Usuario>
   <Usuario>
-    <Nombre>n</Nombre>
-    <Contraseña>m</Contraseña>
+    <Nombre>m</Nombre>
+    <Contraseña>t</Contraseña>
   </Usuario>
 </ArrayOfUsuario>

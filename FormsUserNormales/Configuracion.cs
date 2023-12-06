@@ -1,4 +1,5 @@
-﻿using ClasesApp;
+﻿using ClasesApp.Interfaces;
+using ClasesApp.metodos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

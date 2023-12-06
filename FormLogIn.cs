@@ -8,6 +8,8 @@ using AppConsorcio;
 using System.Security.Cryptography.X509Certificates;
 using System.Xml;
 using ClasesApp;
+using ClasesApp.Interfaces;
+using ClasesApp.metodos;
 
 namespace AppConsorcio
 {

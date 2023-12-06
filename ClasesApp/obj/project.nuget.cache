@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x9t3YmoI2CaYTBtOwtUTxFXWsjbbwrpV3lNs8C50okGtlzDxtAfLDest8IfXzWW1bVSrJjE5wfy/U0HoZO4rsQ==",
+  "dgSpecHash": "5gxs+cCV/9+D+hITyWNT0MtboR0xBMG85dSelgz0b5Y2DaaKv/VSvfYw47WA6au0X0gsq2idaEhcC1J/C/yMmA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\ClasesApp\\ClasesApp.csproj",
+  "projectFilePath": "C:\\Users\\Juanma\\Desktop\\CONSORCIOFINAL\\ClasesApp\\ClasesApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Juanma\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Juanma\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",

@@ -10,7 +10,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using ClasesApp;
-
+using ClasesApp.Serializadoras;
+using ClasesApp.Interfaces;
+using ClasesApp.metodos;
 
 namespace AppConsorcio
 {
@@ -35,33 +37,20 @@ namespace AppConsorcio
 
         public void btnCrearUsuario_Click(object sender, EventArgs e)
         {
-            string path = "C:\\Users\\Juanma\\Desktop\\AppConsorcioFinal\\Consorcio_app\\Datos.xml";
+            
             string nombreUsuarioNuevo = txtNombreUsuarioNuevo.Text;
             string contraseñaUsuarioNuevo = txtContraseñaUsuarioNuevo.Text;
 
-            if (string.IsNullOrWhiteSpace(nombreUsuarioNuevo) || string.IsNullOrWhiteSpace(contraseñaUsuarioNuevo))
+            IOperacionesAdministrador operacionesAdministrador = new MetodosAdministrador();
+            bool usuarioCreado = operacionesAdministrador.CrearUsuario(nombreUsuarioNuevo, contraseñaUsuarioNuevo);
+
+            txtNombreUsuarioNuevo.Clear();
+            txtContraseñaUsuarioNuevo.Clear();
+
+            if (usuarioCreado == true)
             {
-                MessageBox.Show("Por favor, ingrese el nombre de usuario y la contraseña.");
-                return;
+                MessageBox.Show("Nuevo usuario creado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-            // Crear una instancia de la clase Usuario con los datos ingresados
-            UsuarioPadre usuarioNuevo = new Usuario();
-            usuarioNuevo.Nombre = nombreUsuarioNuevo;
-            usuarioNuevo.Contraseña = contraseñaUsuarioNuevo;
-
-            // Deserializar la lista actual de usuarios
-            SerializadoraXML<Usuario> serializadora = new SerializadoraXML<Usuario>(path);
-            List<Usuario> usuarios = serializadora.Deserializar();
-
-            // Agregar el nuevo usuario a la lista
-            usuarios.Add((Usuario)usuarioNuevo);
-
-            // Serializar la lista actualizada de usuarios al archivo XML
-            serializadora.Serializar(usuarios);
-
-            MessageBox.Show("Nuevo usuario creado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             // Limpiar los campos de entrada
             txtNombreUsuarioNuevo.Clear();
             txtContraseñaUsuarioNuevo.Clear();

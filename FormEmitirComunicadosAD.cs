@@ -5,6 +5,8 @@ using Newtonsoft.Json;
 using System.IO;
 using AppConsorcio;
 using ClasesApp;
+using ClasesApp.Interfaces;
+using ClasesApp.Serializadoras;
 
 namespace AppConsorcio
 {
