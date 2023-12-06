@@ -18,7 +18,7 @@ namespace AppConsorcio.Forms
         {
             InitializeComponent();
             nombreUsuarioActual = FormLogIn.NombreUsuarioActual;
-            
+
         }
 
         private void Reclamos_Load(object sender, EventArgs e)
@@ -118,6 +118,6 @@ namespace AppConsorcio.Forms
                 rtbReclamos.Visible = true;
             }
         }
-        
+
     }
 }

@@ -45,10 +45,20 @@ namespace AppConsorcio.Forms
         {
             SetButtonColors(this);
         }
-        
+
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
+            // Cerrar el formulario actual (Configuracion)
             this.Close();
+
+            // Cerrar el formulario del menú principal
+            MainMenu mainMenu = Application.OpenForms.OfType<MainMenu>().FirstOrDefault();
+            if (mainMenu != null)
+            {
+                mainMenu.Close();
+            }
+
+            // Mostrar el formulario de inicio de sesión
             FormLogIn formLogIn = new FormLogIn();
             formLogIn.Show();
         }
@@ -83,10 +93,15 @@ namespace AppConsorcio.Forms
                 // Éxito
                 MessageBox.Show("Usuario y contraseña cambiados con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Cerrar el formulario actual y mostrar el formulario de inicio de sesión
-                Close();
-                FormLogIn login = new FormLogIn();
-                login.Show();
+                MainMenu mainMenu = Application.OpenForms.OfType<MainMenu>().FirstOrDefault();
+                if (mainMenu != null)
+                {
+                    mainMenu.Close();
+                }
+
+                // Mostrar el formulario de inicio de sesión
+                FormLogIn formLogIn = new FormLogIn();
+                formLogIn.Show();
             }
             else
             {
@@ -95,6 +110,6 @@ namespace AppConsorcio.Forms
             }
         }
 
-        
+
     }
 }

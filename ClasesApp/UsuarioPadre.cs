@@ -11,10 +11,11 @@ namespace ClasesApp
     [XmlInclude(typeof(Usuario))]
     [XmlInclude(typeof(AdminHijo))]
 
-    public class UsuarioPadre
+    public  abstract class UsuarioPadre
     {
         private string nombre;
         private string contraseña;
+        public string categoria;
 
         public string Nombre { get => nombre; set => nombre = value; }
         public string Contraseña { get => contraseña; set => contraseña = value; }
@@ -24,10 +25,14 @@ namespace ClasesApp
             
         }
 
-        public UsuarioPadre(string nombre, string contraseña)
+        public UsuarioPadre(string nombre, string contraseña, string categoria)
         {
             Nombre = nombre;
             Contraseña = contraseña;
+            this.categoria = categoria;
         }
+
+        public abstract string Categoria();
+        
     }
 }

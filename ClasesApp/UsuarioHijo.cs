@@ -6,6 +6,7 @@ using ClasesApp;
 using Newtonsoft.Json;
 
 
+
 namespace ClasesApp
 {
     [Serializable]
@@ -17,12 +18,18 @@ namespace ClasesApp
 
         }
 
-        public Usuario(string nombre, string contraseña) : base(nombre, contraseña) 
+        public Usuario(string nombre, string contraseña, string categoria) : base(nombre, contraseña, categoria) 
         {
             Nombre = nombre;
             Contraseña = contraseña;
+            categoria = "User";
         }
-        
+
+        public override string Categoria()
+        {
+            return categoria;
+        }
+
 
         //public static bool operator ==(Usuario usuario, Type tipoUsuario)
         //{

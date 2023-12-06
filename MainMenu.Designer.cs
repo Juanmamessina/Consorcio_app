@@ -37,8 +37,10 @@
             btnComunicados = new Button();
             btnUsuario = new Button();
             panelLogo = new Panel();
+            lblCategoria = new Label();
             label1 = new Label();
             panelTitulo = new Panel();
+            btnCloseChildForm = new Button();
             btnMinimizar = new Button();
             btnMaximizar = new Button();
             btnCerrar = new Button();
@@ -47,7 +49,6 @@
             lblFecha = new Label();
             lblHora = new Label();
             timerHoraFecha = new System.Windows.Forms.Timer(components);
-            btnCloseChildForm = new Button();
             panelMenu.SuspendLayout();
             panelLogo.SuspendLayout();
             panelTitulo.SuspendLayout();
@@ -172,6 +173,7 @@
             // panelLogo
             // 
             panelLogo.BackColor = Color.FromArgb(39, 39, 58);
+            panelLogo.Controls.Add(lblCategoria);
             panelLogo.Controls.Add(label1);
             panelLogo.Dock = DockStyle.Top;
             panelLogo.Location = new Point(0, 0);
@@ -180,12 +182,23 @@
             panelLogo.Size = new Size(220, 80);
             panelLogo.TabIndex = 0;
             // 
+            // lblCategoria
+            // 
+            lblCategoria.Anchor = AnchorStyles.None;
+            lblCategoria.AutoSize = true;
+            lblCategoria.ForeColor = Color.Gainsboro;
+            lblCategoria.Location = new Point(137, 47);
+            lblCategoria.Name = "lblCategoria";
+            lblCategoria.Size = new Size(76, 15);
+            lblCategoria.TabIndex = 2;
+            lblCategoria.Text = "                       ";
+            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.LightGray;
-            label1.Location = new Point(45, 34);
+            label1.Location = new Point(34, 27);
             label1.Name = "label1";
             label1.Size = new Size(113, 20);
             label1.TabIndex = 1;
@@ -205,6 +218,18 @@
             panelTitulo.Size = new Size(690, 80);
             panelTitulo.TabIndex = 6;
             panelTitulo.MouseDown += panelTitulo_MouseDown;
+            // 
+            // btnCloseChildForm
+            // 
+            btnCloseChildForm.BackgroundImage = (Image)resources.GetObject("btnCloseChildForm.BackgroundImage");
+            btnCloseChildForm.FlatAppearance.BorderSize = 0;
+            btnCloseChildForm.FlatStyle = FlatStyle.Flat;
+            btnCloseChildForm.Location = new Point(25, 23);
+            btnCloseChildForm.Name = "btnCloseChildForm";
+            btnCloseChildForm.Size = new Size(31, 31);
+            btnCloseChildForm.TabIndex = 4;
+            btnCloseChildForm.UseVisualStyleBackColor = true;
+            btnCloseChildForm.Click += btnCloseChildForm_Click;
             // 
             // btnMinimizar
             // 
@@ -303,18 +328,6 @@
             timerHoraFecha.Enabled = true;
             timerHoraFecha.Tick += timerHoraFecha_Tick;
             // 
-            // btnCloseChildForm
-            // 
-            btnCloseChildForm.BackgroundImage = (Image)resources.GetObject("btnCloseChildForm.BackgroundImage");
-            btnCloseChildForm.FlatAppearance.BorderSize = 0;
-            btnCloseChildForm.FlatStyle = FlatStyle.Flat;
-            btnCloseChildForm.Location = new Point(25, 23);
-            btnCloseChildForm.Name = "btnCloseChildForm";
-            btnCloseChildForm.Size = new Size(31, 31);
-            btnCloseChildForm.TabIndex = 4;
-            btnCloseChildForm.UseVisualStyleBackColor = true;
-            btnCloseChildForm.Click += btnCloseChildForm_Click;
-            // 
             // MainMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -324,10 +337,12 @@
             Controls.Add(panelTitulo);
             Controls.Add(panelMenu);
             Controls.Add(panelHome);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             IsMdiContainer = true;
             Margin = new Padding(4, 3, 4, 3);
             Name = "MainMenu";
             Text = "MDIParent1";
+            Load += MainMenu_Load;
             panelMenu.ResumeLayout(false);
             panelLogo.ResumeLayout(false);
             panelLogo.PerformLayout();
@@ -357,6 +372,7 @@
         private Label lblHora;
         private System.Windows.Forms.Timer timerHoraFecha;
         private Button btnCloseChildForm;
+        private Label lblCategoria;
     }
 }
 

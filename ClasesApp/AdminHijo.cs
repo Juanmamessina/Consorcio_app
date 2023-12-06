@@ -17,10 +17,16 @@ namespace ClasesApp
             
         }
 
-        public AdminHijo(string nombre, string contraseña) : base(nombre, contraseña)
+        public AdminHijo(string nombre, string contraseña, string categoria) : base(nombre, contraseña, categoria)
         {
             Nombre = nombre;
             Contraseña = contraseña;
+            categoria = "Admin";
+        }
+
+        public override string Categoria()
+        {
+            return categoria;
         }
     }
 }

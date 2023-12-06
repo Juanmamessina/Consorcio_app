@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Configuracion));
             btnCerrarSesion = new Button();
             panel1 = new Panel();
             txtUsuarioNuevo = new TextBox();
@@ -47,9 +48,9 @@
             btnCerrarSesion.FlatStyle = FlatStyle.Popup;
             btnCerrarSesion.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             btnCerrarSesion.ForeColor = Color.Gainsboro;
-            btnCerrarSesion.Location = new Point(410, 311);
+            btnCerrarSesion.Location = new Point(413, 249);
             btnCerrarSesion.Name = "btnCerrarSesion";
-            btnCerrarSesion.Size = new Size(223, 30);
+            btnCerrarSesion.Size = new Size(223, 26);
             btnCerrarSesion.TabIndex = 1;
             btnCerrarSesion.Text = "Cerrar sesion";
             btnCerrarSesion.UseVisualStyleBackColor = false;
@@ -68,24 +69,24 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(800, 450);
+            panel1.Size = new Size(800, 390);
             panel1.TabIndex = 2;
             // 
             // txtUsuarioNuevo
             // 
             txtUsuarioNuevo.Anchor = AnchorStyles.None;
-            txtUsuarioNuevo.Location = new Point(294, 167);
+            txtUsuarioNuevo.Location = new Point(297, 124);
             txtUsuarioNuevo.Name = "txtUsuarioNuevo";
-            txtUsuarioNuevo.Size = new Size(464, 23);
+            txtUsuarioNuevo.Size = new Size(464, 21);
             txtUsuarioNuevo.TabIndex = 8;
             txtUsuarioNuevo.Visible = false;
             // 
             // txtContraseñaNueva
             // 
             txtContraseñaNueva.Anchor = AnchorStyles.None;
-            txtContraseñaNueva.Location = new Point(294, 231);
+            txtContraseñaNueva.Location = new Point(297, 179);
             txtContraseñaNueva.Name = "txtContraseñaNueva";
-            txtContraseñaNueva.Size = new Size(464, 23);
+            txtContraseñaNueva.Size = new Size(464, 21);
             txtContraseñaNueva.TabIndex = 10;
             txtContraseñaNueva.Visible = false;
             // 
@@ -97,9 +98,9 @@
             btnConfirmarCambios.FlatStyle = FlatStyle.Popup;
             btnConfirmarCambios.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             btnConfirmarCambios.ForeColor = Color.Gainsboro;
-            btnConfirmarCambios.Location = new Point(410, 275);
+            btnConfirmarCambios.Location = new Point(413, 217);
             btnConfirmarCambios.Name = "btnConfirmarCambios";
-            btnConfirmarCambios.Size = new Size(223, 30);
+            btnConfirmarCambios.Size = new Size(223, 26);
             btnConfirmarCambios.TabIndex = 12;
             btnConfirmarCambios.Text = "Confirmar cambios";
             btnConfirmarCambios.UseVisualStyleBackColor = false;
@@ -114,9 +115,9 @@
             btnCambiarUsuarioYContraseña.FlatStyle = FlatStyle.Popup;
             btnCambiarUsuarioYContraseña.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             btnCambiarUsuarioYContraseña.ForeColor = Color.Gainsboro;
-            btnCambiarUsuarioYContraseña.Location = new Point(410, 224);
+            btnCambiarUsuarioYContraseña.Location = new Point(413, 173);
             btnCambiarUsuarioYContraseña.Name = "btnCambiarUsuarioYContraseña";
-            btnCambiarUsuarioYContraseña.Size = new Size(223, 30);
+            btnCambiarUsuarioYContraseña.Size = new Size(223, 26);
             btnCambiarUsuarioYContraseña.TabIndex = 11;
             btnCambiarUsuarioYContraseña.Text = "Cambiar usuario y contraseña";
             btnCambiarUsuarioYContraseña.UseVisualStyleBackColor = false;
@@ -129,7 +130,7 @@
             lblNuevaContraseña.BackColor = Color.Transparent;
             lblNuevaContraseña.Font = new Font("Sitka Banner", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lblNuevaContraseña.ForeColor = Color.White;
-            lblNuevaContraseña.Location = new Point(435, 193);
+            lblNuevaContraseña.Location = new Point(438, 146);
             lblNuevaContraseña.Name = "lblNuevaContraseña";
             lblNuevaContraseña.Size = new Size(198, 70);
             lblNuevaContraseña.TabIndex = 9;
@@ -143,7 +144,7 @@
             lblNuevoUsuario.BackColor = Color.Transparent;
             lblNuevoUsuario.Font = new Font("Sitka Banner", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lblNuevoUsuario.ForeColor = Color.White;
-            lblNuevoUsuario.Location = new Point(435, 120);
+            lblNuevoUsuario.Location = new Point(438, 83);
             lblNuevoUsuario.Name = "lblNuevoUsuario";
             lblNuevoUsuario.Size = new Size(166, 70);
             lblNuevoUsuario.TabIndex = 7;
@@ -152,10 +153,12 @@
             // 
             // Configuracion
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(7F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 390);
             Controls.Add(panel1);
+            Font = new Font("Mongolian Baiti", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Configuracion";
             Text = "Configuracion";
             Load += Configuracion_Load_1;

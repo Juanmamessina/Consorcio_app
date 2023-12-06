@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Comunicados));
             panel1 = new Panel();
             rtbComunicados = new RichTextBox();
             panel1.SuspendLayout();
@@ -40,25 +41,27 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(800, 450);
+            panel1.Size = new Size(800, 390);
             panel1.TabIndex = 0;
             // 
             // rtbComunicados
             // 
             rtbComunicados.Anchor = AnchorStyles.None;
-            rtbComunicados.Location = new Point(238, 128);
+            rtbComunicados.Location = new Point(238, 111);
             rtbComunicados.Name = "rtbComunicados";
             rtbComunicados.ReadOnly = true;
-            rtbComunicados.Size = new Size(550, 287);
+            rtbComunicados.Size = new Size(550, 249);
             rtbComunicados.TabIndex = 12;
             rtbComunicados.Text = "";
             // 
             // Comunicados
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(7F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 390);
             Controls.Add(panel1);
+            Font = new Font("Mongolian Baiti", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Comunicados";
             Text = "Comunicados";
             Load += Comunicados_Load;

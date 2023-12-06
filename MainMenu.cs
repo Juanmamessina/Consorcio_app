@@ -1,7 +1,7 @@
-﻿using System;
+﻿using AppConsorcio.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -9,6 +9,9 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+// Agrega esta línea al principio de MainMenu.cs
+
 
 namespace AppConsorcio
 {
@@ -20,6 +23,8 @@ namespace AppConsorcio
         private Random random;
         private int tempIndex;
         private Form formActivo;
+        Usuario usuario;
+
 
         //constructor
         public MainMenu()
@@ -31,6 +36,9 @@ namespace AppConsorcio
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             btnCloseChildForm.Visible = false;
+            //usuario = new Usuario();
+            //lblCategoria.Text = usuario.Categoria();
+
         }
 
         //para poder arrastrar el form
@@ -43,6 +51,8 @@ namespace AppConsorcio
 
 
         //metodos
+
+        //elijo color random
 
         private Color SelectThemeColor()
         {
@@ -142,7 +152,7 @@ namespace AppConsorcio
 
         private void btnUsuario_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new Forms.Usuario(), sender);
         }
 
         private void btnComunicados_Click(object sender, EventArgs e)
@@ -157,14 +167,12 @@ namespace AppConsorcio
 
         private void btnEventos_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new Forms.Eventos(), sender);
         }
 
         private void btnConfiguracion_Click(object sender, EventArgs e)
         {
-
             OpenChildForm(new Forms.Configuracion(), sender);
-
         }
 
 
@@ -174,7 +182,6 @@ namespace AppConsorcio
             if (formActivo != null)
                 formActivo.Close();
             Reset();
-
         }
         private void Reset()
         {
@@ -185,5 +192,12 @@ namespace AppConsorcio
             currentButton = null;
             btnCloseChildForm.Visible = false;
         }
+
+
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

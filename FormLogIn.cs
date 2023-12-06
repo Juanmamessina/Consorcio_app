@@ -17,10 +17,12 @@ namespace AppConsorcio
         public FormLogIn()
         {
             InitializeComponent();
-            admin = new AdminHijo("ad", "a");
+            //admin = new AdminHijo("ad", "a");
         }
 
         public static string NombreUsuarioActual { get; private set; }
+        public static string ContraseñaUsuarioActual { get; private set; }
+
 
         //para poder arrastrar el form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -102,9 +104,10 @@ namespace AppConsorcio
                     MessageBox.Show("Usuario o contraseña incorrectos");
                     return; // volver a preguntar
                 }
-                else if (usuarioValidado == true)
+                else if (usuarioValidado == true && usuarioIngresado != "admin")
                 {
                     NombreUsuarioActual = usuarioIngresado;
+                    ContraseñaUsuarioActual = contraseñaIngresada;
                     MessageBox.Show("El ingreso fue exitoso");
                     this.Close();
                     MainMenu menu = new MainMenu();

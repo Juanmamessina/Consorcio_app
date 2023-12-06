@@ -16,5 +16,32 @@ namespace AppConsorcio.Forms
         {
             InitializeComponent();
         }
+
+        private void Eventos_Load(object sender, EventArgs e)
+        {
+            LoadTheme();
+        }
+
+        private void SetButtonColors(Control control)
+        {
+            foreach (Control ctrl in control.Controls)
+            {
+                if (ctrl is Button btn)
+                {
+                    btn.BackColor = ThemeColor.colorPrimario;
+                    btn.ForeColor = Color.Black;
+                    btn.FlatAppearance.BorderColor = ThemeColor.colorSecundario;
+                }
+
+                // Llamada recursiva para los controles anidados
+                SetButtonColors(ctrl);
+            }
+        }
+        private void LoadTheme()
+        {
+            SetButtonColors(this);
+        }
+
+
     }
 }
