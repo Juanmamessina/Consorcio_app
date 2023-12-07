@@ -124,11 +124,36 @@ namespace AppConsorcio.Forms
 
         private void btnAgendar_Click(object sender, EventArgs e)
         {
-
-            // Llamar a la función para agendar cuando se hace clic en el botón
             DateTime fechaSeleccionada = monthCalendar.SelectionStart;
-            GuardarReservaEnArchivo(fechaSeleccionada);
-            DeshabilitarFechaEnCalendario(fechaSeleccionada);
+
+            // Verificar si ya hay una reserva para la fecha seleccionada
+            if (FechaYaAgendada(fechaSeleccionada))
+            {
+                MessageBox.Show("La fecha ya fue agendada previamente, por favor seleccione otra fecha.", "Fecha ocupada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                // Llamar a la función para agendar solo si la fecha no está ocupada
+                GuardarReservaEnArchivo(fechaSeleccionada);
+                DeshabilitarFechaEnCalendario(fechaSeleccionada);
+            }
+        }
+
+        private bool FechaYaAgendada(DateTime fecha)
+        {
+            string path = "reservas.txt";
+
+            if (File.Exists(path))
+            {
+                // Deserializar en una lista de Reserva
+                ISerializable<Reserva> serializableReservas = new SerializadoraTXT<Reserva>(path);
+                List<Reserva> listaReservas = serializableReservas.Deserializar();
+
+                // Verificar si ya hay una reserva para la fecha seleccionada
+                return listaReservas?.Any(reserva => reserva.FechaReservada.Date == fecha.Date) ?? false;
+            }
+
+            return false;
         }
 
         private void btnConsultarEventos_Click(object sender, EventArgs e)

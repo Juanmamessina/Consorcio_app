@@ -49,6 +49,7 @@
             lblEmitirComunicados.Size = new Size(511, 35);
             lblEmitirComunicados.TabIndex = 0;
             lblEmitirComunicados.Text = "Emita el comunicado correspondiente aqui debajo:";
+            lblEmitirComunicados.Click += lblEmitirComunicados_Click;
             // 
             // txtContenido
             // 
@@ -56,6 +57,7 @@
             txtContenido.Name = "txtContenido";
             txtContenido.Size = new Size(464, 23);
             txtContenido.TabIndex = 1;
+            txtContenido.TextChanged += txtContenido_TextChanged;
             // 
             // btnPublicarComunicado
             // 

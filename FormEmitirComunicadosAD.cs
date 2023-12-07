@@ -10,9 +10,9 @@ using ClasesApp.Serializadoras;
 
 namespace AppConsorcio
 {
-    public partial class FormEmitirComunicadosAD : Form 
+    public partial class FormEmitirComunicadosAD : Form
     {
-        
+
 
         public FormEmitirComunicadosAD()
         {
@@ -82,7 +82,13 @@ namespace AppConsorcio
             }
         }
 
+        private void txtContenido_TextChanged(object sender, EventArgs e)
+        {
 
+        }
 
+        private void lblEmitirComunicados_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

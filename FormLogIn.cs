@@ -122,7 +122,7 @@ namespace AppConsorcio
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                     // Si el usuario es "admin" y la contraseña es "a", abrir el formulario especifico del admin
-                    MenuAD formAdmin = new MenuAD();
+                    MainMenuAdministrador formAdmin = new MainMenuAdministrador();
                     formAdmin.ShowDialog();
                     return;
                 }

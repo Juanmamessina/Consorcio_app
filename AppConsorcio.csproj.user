@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="FormCrearUsuarioAD.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="FormEditarUsuariosMenuAD.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="FormEliminarUsuarioAD.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="FormLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmAdministrador\FormConfiguracionAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmAdministrador\FormsComunicadosAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmAdministrador\FormUsuariosAD.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormsUserNormales\Comunicados.cs">
@@ -29,6 +29,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MainMenuAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="MenuAD.cs">

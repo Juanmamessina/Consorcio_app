@@ -46,8 +46,8 @@ namespace AppConsorcio
         {
             this.Close();
 
-            FormEditarUsuariosMenuAD formEditarUsuariosMenu = new FormEditarUsuariosMenuAD();
-            formEditarUsuariosMenu.Show();
+            //FormEditarUsuariosMenuAD formEditarUsuariosMenu = new FormEditarUsuariosMenuAD();
+            //formEditarUsuariosMenu.Show();
         }
     }
 }
