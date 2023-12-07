@@ -52,12 +52,8 @@ namespace AppConsorcio.Forms
             // Cerrar el formulario actual (Configuracion)
             this.Close();
 
-            // Cerrar el formulario del menú principal
-            MainMenu mainMenu = Application.OpenForms.OfType<MainMenu>().FirstOrDefault();
-            if (mainMenu != null)
-            {
-                mainMenu.Close();
-            }
+            // Cerrar el formulario del menú principal usando GENERICS
+            AccionesFormulario<MainMenu>.CerrarFormulario();
 
             // Mostrar el formulario de inicio de sesión
             FormLogIn formLogIn = new FormLogIn();
@@ -94,11 +90,7 @@ namespace AppConsorcio.Forms
                 // Éxito
                 MessageBox.Show("Usuario y contraseña cambiados con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                MainMenu mainMenu = Application.OpenForms.OfType<MainMenu>().FirstOrDefault();
-                if (mainMenu != null)
-                {
-                    mainMenu.Close();
-                }
+                AccionesFormulario<MainMenu>.CerrarFormulario();
 
                 // Mostrar el formulario de inicio de sesión
                 FormLogIn formLogIn = new FormLogIn();

@@ -22,3 +22,4 @@ C:\Users\Juanma\Desktop\CONSORCIOFINAL\ClasesApp\obj\Debug\net6.0\ClasesApp.dll
 C:\Users\Juanma\Desktop\CONSORCIOFINAL\ClasesApp\obj\Debug\net6.0\refint\ClasesApp.dll
 C:\Users\Juanma\Desktop\CONSORCIOFINAL\ClasesApp\obj\Debug\net6.0\ClasesApp.pdb
 C:\Users\Juanma\Desktop\CONSORCIOFINAL\ClasesApp\obj\Debug\net6.0\ref\ClasesApp.dll
+C:\Users\Juanma\Desktop\CONSORCIOFINAL\ClasesApp\obj\Debug\net6.0\ClasesApp.csproj.ResolveComReference.cache

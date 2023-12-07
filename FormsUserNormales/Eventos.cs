@@ -1,20 +1,24 @@
-﻿using System;
+﻿using ClasesApp.Serializadoras;
+using ClasesApp;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClasesApp.Interfaces;
+using ClasesApp.metodos;
 
 namespace AppConsorcio.Forms
 {
     public partial class Eventos : Form
     {
+        private readonly string nombreUsuarioActual;
+
         public Eventos()
         {
             InitializeComponent();
+            nombreUsuarioActual = FormLogIn.NombreUsuarioActual;
         }
 
         private void Eventos_Load(object sender, EventArgs e)
@@ -37,11 +41,112 @@ namespace AppConsorcio.Forms
                 SetButtonColors(ctrl);
             }
         }
+
         private void LoadTheme()
         {
             SetButtonColors(this);
         }
 
 
+
+        private void GuardarReservaEnArchivo(DateTime fecha)
+        {
+            string path = "reservas.txt";
+
+            var serializadora = new SerializadoraTXT<Reserva>(path);
+            List<Reserva> reservas = serializadora.Deserializar();
+
+            // Crear un objeto que represente la reserva
+            Reserva reserva = new Reserva
+            {
+                Fecha = DateTime.Now,
+                NombreUsuario = nombreUsuarioActual,
+                FechaReservada = fecha,
+            };
+
+            // Agregar la nueva reserva a la lista
+            reservas.Add(reserva);
+
+            // Utilizar la SerializadoraTXT para guardar las reservas actualizadas
+            if (serializadora.Serializar(reservas))
+            {
+                MessageBox.Show("Reserva hecha exitosamente.");
+            }
+            else
+            {
+                MessageBox.Show("No se pudo realizar la reserva.");
+            }
+
+            DateTime fechaSeleccionada = monthCalendar.SelectionStart;
+            DeshabilitarFechaEnCalendario(fechaSeleccionada);
+        }
+
+
+        private void DeshabilitarFechaEnCalendario(DateTime fecha)
+        {
+            // Deshabilitar la fecha seleccionada
+            monthCalendar.AddBoldedDate(fecha);
+            monthCalendar.UpdateBoldedDates();
+        }
+
+        private void CargarFechasReservadas()
+        {
+            string path = "reservas.txt";
+
+
+            if (File.Exists(path))
+            {
+                // Deserializar en una lista de Reserva
+                ISerializable<Reserva> serializableReservas = new SerializadoraTXT<Reserva>(path);
+                List<Reserva> listaReservas = serializableReservas.Deserializar();
+
+                if (listaReservas != null && listaReservas.Any())
+                {
+                    foreach (var reserva in listaReservas)
+                    {
+                        string reservaFormateada = reserva.ToString();
+                        rtbReservas.AppendText($"{reservaFormateada}{Environment.NewLine}");
+                    }
+                }
+                else
+                {
+                    rtbReservas.AppendText("No hay reservas hechas." + Environment.NewLine);
+                }
+
+                rtbReservas.Visible = true;
+            }
+            else
+            {
+                rtbReservas.AppendText("No hay reservas hechas." + Environment.NewLine);
+                rtbReservas.Visible = true;
+            }
+        }
+
+        private void btnAgendar_Click(object sender, EventArgs e)
+        {
+
+            // Llamar a la función para agendar cuando se hace clic en el botón
+            DateTime fechaSeleccionada = monthCalendar.SelectionStart;
+            GuardarReservaEnArchivo(fechaSeleccionada);
+            DeshabilitarFechaEnCalendario(fechaSeleccionada);
+        }
+
+        private void btnConsultarEventos_Click(object sender, EventArgs e)
+        {
+            if (sender == btnConsultarEventos)
+            {
+                monthCalendar.Visible = false;
+                btnAgendar.Visible = false;
+                btnConsultarEventos.Visible = false;
+                rtbReservas.Visible = true;
+
+                // Solo cargar las fechas reservadas si el rtbReservas está visible
+                CargarFechasReservadas();
+            }
+        }
     }
 }
+
+
+
+
