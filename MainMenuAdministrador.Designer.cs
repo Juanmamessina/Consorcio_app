@@ -295,13 +295,13 @@
             lblFechaAD.Anchor = AnchorStyles.None;
             lblFechaAD.AutoSize = true;
             lblFechaAD.BackColor = Color.Black;
-            lblFechaAD.Font = new Font("Microsoft Sans Serif", 27.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lblFechaAD.Font = new Font("Microsoft Sans Serif", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
             lblFechaAD.ForeColor = Color.Gainsboro;
-            lblFechaAD.Location = new Point(146, 253);
+            lblFechaAD.Location = new Point(48, 253);
             lblFechaAD.Name = "lblFechaAD";
-            lblFechaAD.Size = new Size(168, 42);
+            lblFechaAD.Size = new Size(93, 33);
             lblFechaAD.TabIndex = 3;
-            lblFechaAD.Text = "               ";
+            lblFechaAD.Text = "label3";
             // 
             // lblHoraAD
             // 
@@ -311,12 +311,13 @@
             lblHoraAD.ForeColor = Color.Gainsboro;
             lblHoraAD.Location = new Point(177, 157);
             lblHoraAD.Name = "lblHoraAD";
-            lblHoraAD.Size = new Size(138, 42);
+            lblHoraAD.Size = new Size(118, 42);
             lblHoraAD.TabIndex = 2;
-            lblHoraAD.Text = "            ";
+            lblHoraAD.Text = "label2";
             // 
             // timer1
             // 
+            timer1.Enabled = true;
             timer1.Tick += timer1_Tick;
             // 
             // MainMenuAdministrador

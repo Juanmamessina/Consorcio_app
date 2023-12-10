@@ -21,7 +21,7 @@ namespace AppConsorcio
         private Random random;
         private int tempIndex;
         private Form formActivo;
-        Usuario usuario;
+        private Reloj reloj;
 
 
         //constructor
@@ -34,9 +34,8 @@ namespace AppConsorcio
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             btnCloseChildForm.Visible = false;
-            //usuario = new Usuario();
-            //lblCategoria.Text = usuario.Categoria();
 
+            reloj = new Reloj();
         }
 
         //para poder arrastrar el form
@@ -45,8 +44,6 @@ namespace AppConsorcio
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-
-
 
         //metodos
 
@@ -173,8 +170,6 @@ namespace AppConsorcio
             OpenChildForm(new Forms.Configuracion(), sender);
         }
 
-
-
         private void btnCloseChildForm_Click(object sender, EventArgs e)
         {
             if (formActivo != null)
@@ -194,12 +189,16 @@ namespace AppConsorcio
 
         private void MainMenu_Load(object sender, EventArgs e)
         {
-
+            // Suscribir al evento de cambio de hora
+            reloj.HoraCambiada += Reloj_HoraCambiada;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void Reloj_HoraCambiada(object sender, EventArgs e)
         {
-
+            // Actualizar la etiqueta de la hora en tu formulario principal
+            lblEventoHora.Text = reloj.HoraActual.ToString("HH:mm:ss");
         }
+
+
     }
 }

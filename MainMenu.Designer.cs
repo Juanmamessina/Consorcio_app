@@ -31,7 +31,10 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             panelMenu = new Panel();
+            lblEventoHora = new Label();
             btnConfiguracion = new Button();
+            btnEventos = new Button();
+            btnReclamos = new Button();
             btnComunicados = new Button();
             btnUsuario = new Button();
             panelLogo = new Panel();
@@ -46,8 +49,6 @@
             lblFecha = new Label();
             lblHora = new Label();
             timerHoraFecha = new System.Windows.Forms.Timer(components);
-            btnEventos = new Button();
-            btnReclamos = new Button();
             panelMenu.SuspendLayout();
             panelLogo.SuspendLayout();
             panelTitulo.SuspendLayout();
@@ -57,6 +58,7 @@
             // panelMenu
             // 
             panelMenu.BackColor = Color.FromArgb(51, 51, 76);
+            panelMenu.Controls.Add(lblEventoHora);
             panelMenu.Controls.Add(btnConfiguracion);
             panelMenu.Controls.Add(btnEventos);
             panelMenu.Controls.Add(btnReclamos);
@@ -68,6 +70,17 @@
             panelMenu.Name = "panelMenu";
             panelMenu.Size = new Size(220, 523);
             panelMenu.TabIndex = 4;
+            // 
+            // lblEventoHora
+            // 
+            lblEventoHora.Anchor = AnchorStyles.None;
+            lblEventoHora.AutoSize = true;
+            lblEventoHora.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            lblEventoHora.Location = new Point(38, 421);
+            lblEventoHora.Name = "lblEventoHora";
+            lblEventoHora.Size = new Size(173, 45);
+            lblEventoHora.TabIndex = 13;
+            lblEventoHora.Text = "                 ";
             // 
             // btnConfiguracion
             // 
@@ -88,6 +101,46 @@
             btnConfiguracion.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnConfiguracion.UseVisualStyleBackColor = true;
             btnConfiguracion.Click += btnConfiguracion_Click;
+            // 
+            // btnEventos
+            // 
+            btnEventos.Dock = DockStyle.Top;
+            btnEventos.FlatAppearance.BorderSize = 0;
+            btnEventos.FlatStyle = FlatStyle.Flat;
+            btnEventos.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnEventos.ForeColor = Color.Gainsboro;
+            btnEventos.Image = (Image)resources.GetObject("btnEventos.Image");
+            btnEventos.ImageAlign = ContentAlignment.MiddleLeft;
+            btnEventos.Location = new Point(0, 260);
+            btnEventos.Name = "btnEventos";
+            btnEventos.Padding = new Padding(12, 0, 0, 0);
+            btnEventos.Size = new Size(220, 60);
+            btnEventos.TabIndex = 3;
+            btnEventos.Text = "   Eventos";
+            btnEventos.TextAlign = ContentAlignment.MiddleLeft;
+            btnEventos.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnEventos.UseVisualStyleBackColor = true;
+            btnEventos.Click += btnEventos_Click;
+            // 
+            // btnReclamos
+            // 
+            btnReclamos.Dock = DockStyle.Top;
+            btnReclamos.FlatAppearance.BorderSize = 0;
+            btnReclamos.FlatStyle = FlatStyle.Flat;
+            btnReclamos.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnReclamos.ForeColor = Color.Gainsboro;
+            btnReclamos.Image = (Image)resources.GetObject("btnReclamos.Image");
+            btnReclamos.ImageAlign = ContentAlignment.MiddleLeft;
+            btnReclamos.Location = new Point(0, 200);
+            btnReclamos.Name = "btnReclamos";
+            btnReclamos.Padding = new Padding(12, 0, 0, 0);
+            btnReclamos.Size = new Size(220, 60);
+            btnReclamos.TabIndex = 2;
+            btnReclamos.Text = "   Reclamos";
+            btnReclamos.TextAlign = ContentAlignment.MiddleLeft;
+            btnReclamos.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnReclamos.UseVisualStyleBackColor = true;
+            btnReclamos.Click += btnReclamos_Click;
             // 
             // btnComunicados
             // 
@@ -150,7 +203,6 @@
             label1.Size = new Size(113, 20);
             label1.TabIndex = 1;
             label1.Text = "Consorcio App";
-            label1.Click += label1_Click;
             // 
             // panelTitulo
             // 
@@ -276,46 +328,6 @@
             timerHoraFecha.Enabled = true;
             timerHoraFecha.Tick += timerHoraFecha_Tick;
             // 
-            // btnEventos
-            // 
-            btnEventos.Dock = DockStyle.Top;
-            btnEventos.FlatAppearance.BorderSize = 0;
-            btnEventos.FlatStyle = FlatStyle.Flat;
-            btnEventos.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnEventos.ForeColor = Color.Gainsboro;
-            btnEventos.Image = (Image)resources.GetObject("btnEventos.Image");
-            btnEventos.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEventos.Location = new Point(0, 260);
-            btnEventos.Name = "btnEventos";
-            btnEventos.Padding = new Padding(12, 0, 0, 0);
-            btnEventos.Size = new Size(220, 60);
-            btnEventos.TabIndex = 3;
-            btnEventos.Text = "   Eventos";
-            btnEventos.TextAlign = ContentAlignment.MiddleLeft;
-            btnEventos.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnEventos.UseVisualStyleBackColor = true;
-            btnEventos.Click += btnEventos_Click;
-            // 
-            // btnReclamos
-            // 
-            btnReclamos.Dock = DockStyle.Top;
-            btnReclamos.FlatAppearance.BorderSize = 0;
-            btnReclamos.FlatStyle = FlatStyle.Flat;
-            btnReclamos.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnReclamos.ForeColor = Color.Gainsboro;
-            btnReclamos.Image = (Image)resources.GetObject("btnReclamos.Image");
-            btnReclamos.ImageAlign = ContentAlignment.MiddleLeft;
-            btnReclamos.Location = new Point(0, 200);
-            btnReclamos.Name = "btnReclamos";
-            btnReclamos.Padding = new Padding(12, 0, 0, 0);
-            btnReclamos.Size = new Size(220, 60);
-            btnReclamos.TabIndex = 2;
-            btnReclamos.Text = "   Reclamos";
-            btnReclamos.TextAlign = ContentAlignment.MiddleLeft;
-            btnReclamos.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnReclamos.UseVisualStyleBackColor = true;
-            btnReclamos.Click += btnReclamos_Click;
-            // 
             // MainMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -332,6 +344,7 @@
             Text = "MDIParent1";
             Load += MainMenu_Load;
             panelMenu.ResumeLayout(false);
+            panelMenu.PerformLayout();
             panelLogo.ResumeLayout(false);
             panelLogo.PerformLayout();
             panelTitulo.ResumeLayout(false);
@@ -360,6 +373,7 @@
         private Button btnCloseChildForm;
         private Button btnEventos;
         private Button btnReclamos;
+        private Label lblEventoHora;
     }
 }
 
