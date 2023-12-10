@@ -13,14 +13,23 @@ namespace AppConsorcio.Forms
 {
     public partial class Eventos : Form
     {
-        private readonly string nombreUsuarioActual;
-
+        private string nombreUsuarioActual;
         public Eventos()
         {
             InitializeComponent();
-            nombreUsuarioActual = FormLogIn.NombreUsuarioActual;
+            FormLogIn formLogIn = new FormLogIn();
+            formLogIn.InformacionUsuarioEvent += ManejarInformacionUsuario;
+            //nombreUsuarioActual = FormLogIn.NombreUsuarioActual;
         }
 
+        private void ManejarInformacionUsuario(string usuario, string contraseña)
+        {
+            // Almacena la información en variables de clase
+            nombreUsuarioActual = usuario;
+
+
+            // Puedes realizar otras acciones aquí si es necesario
+        }
         private void Eventos_Load(object sender, EventArgs e)
         {
             LoadTheme();
@@ -55,7 +64,7 @@ namespace AppConsorcio.Forms
 
             var serializadora = new SerializadoraTXT<Reserva>(path);
             List<Reserva> reservas = serializadora.Deserializar();
-
+            nombreUsuarioActual = FormLogIn.NombreUsuarioActual;
             // Crear un objeto que represente la reserva
             Reserva reserva = new Reserva
             {

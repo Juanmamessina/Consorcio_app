@@ -10,8 +10,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-// Agrega esta línea al principio de MainMenu.cs
-
 
 namespace AppConsorcio
 {

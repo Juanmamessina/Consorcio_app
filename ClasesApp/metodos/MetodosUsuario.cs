@@ -27,7 +27,6 @@ namespace ClasesApp.metodos
             if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(contraseña))
             {
                 usuarioValido = false;
-
             }
             else
             {

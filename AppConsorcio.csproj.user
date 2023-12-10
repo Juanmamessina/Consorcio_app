@@ -34,11 +34,5 @@
     <Compile Update="MainMenuAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="MenuAD.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="FormEmitirComunicadosAD.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
 </Project>

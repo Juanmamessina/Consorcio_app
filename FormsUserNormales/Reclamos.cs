@@ -20,8 +20,17 @@ namespace AppConsorcio.Forms
         public Reclamos()
         {
             InitializeComponent();
-            nombreUsuarioActual = FormLogIn.NombreUsuarioActual;
 
+            FormLogIn formLogIn = new FormLogIn();
+            formLogIn.InformacionUsuarioEvent += ManejarInformacionUsuario;
+        }
+        private void ManejarInformacionUsuario(string usuario, string contraseña)
+        {
+            // Almacena la información en variables de clase
+            nombreUsuarioActual = usuario;
+
+
+            // Puedes realizar otras acciones aquí si es necesario
         }
 
         private void Reclamos_Load(object sender, EventArgs e)
@@ -64,6 +73,7 @@ namespace AppConsorcio.Forms
         private void btnPublicarReclamo_Click(object sender, EventArgs e)
         {
             string contenido = txtContenidoReclamo.Text.Trim();
+            nombreUsuarioActual = FormLogIn.NombreUsuarioActual;
 
             IOperacionesUsuario operacionesUsuario = new MetodosUsuario();
             bool reclamoPublicado = operacionesUsuario.PublicarReclamo(contenido, nombreUsuarioActual);

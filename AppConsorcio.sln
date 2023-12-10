@@ -5,7 +5,9 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppConsorcio", "AppConsorcio.csproj", "{5C465A8D-67B0-4715-A19A-08C52271E123}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClasesApp", "..\ClasesApp\ClasesApp.csproj", "{8E0D2D50-33F8-40D4-9BF2-3849808A3DF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClasesApp", "..\ClasesApp\ClasesApp.csproj", "{8E0D2D50-33F8-40D4-9BF2-3849808A3DF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "..\TestProject1\TestProject1.csproj", "{16CF4E18-1F28-494A-BAD3-11150465DF04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8E0D2D50-33F8-40D4-9BF2-3849808A3DF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E0D2D50-33F8-40D4-9BF2-3849808A3DF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E0D2D50-33F8-40D4-9BF2-3849808A3DF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16CF4E18-1F28-494A-BAD3-11150465DF04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16CF4E18-1F28-494A-BAD3-11150465DF04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16CF4E18-1F28-494A-BAD3-11150465DF04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16CF4E18-1F28-494A-BAD3-11150465DF04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

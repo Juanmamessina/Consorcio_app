@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClasesApp;
 
 namespace AppConsorcio.Forms
 {
@@ -18,7 +19,20 @@ namespace AppConsorcio.Forms
         public Configuracion()
         {
             InitializeComponent();
-            nombreUsuarioActual = FormLogIn.NombreUsuarioActual;
+            //nombreUsuarioActual = FormLogIn.NombreUsuarioActual;
+
+            // Suscribir al evento de FormLogIn
+            FormLogIn formLogIn = new FormLogIn();
+            formLogIn.InformacionUsuarioEvent += ManejarInformacionUsuario;
+        }
+
+        private void ManejarInformacionUsuario(string usuario, string contraseña)
+        {
+            // Almacena la información en variables de clase
+            nombreUsuarioActual = usuario;
+            
+
+            // Puedes realizar otras acciones aquí si es necesario
         }
 
         private void Configuracion_Load_1(object sender, EventArgs e)
@@ -80,6 +94,12 @@ namespace AppConsorcio.Forms
             // Obtener los valores ingresados por el usuario después de la pausa
             string nuevoUsuarioIngresado = txtUsuarioNuevo.Text;
             string nuevaContraseñaIngresada = txtContraseñaNueva.Text;
+
+            // Usar la información del usuario proveniente del MainMenu
+            // (asumiendo que MainMenu es el formulario activo que ha recibido la información)
+            nombreUsuarioActual = FormLogIn.NombreUsuarioActual;
+
+            DB.UpdateUsuarioYContraseña(nuevoUsuarioIngresado, nuevaContraseñaIngresada, nombreUsuarioActual);
 
             IOperacionesUsuario operacionesUsuario = new MetodosUsuario();
             bool usuarioConContraseñaYNombreCambiado = operacionesUsuario.CambiarUsuarioYContraseña(nuevoUsuarioIngresado, nuevaContraseñaIngresada, nombreUsuarioActual);

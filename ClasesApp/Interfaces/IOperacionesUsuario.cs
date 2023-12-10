@@ -12,6 +12,5 @@ namespace ClasesApp.Interfaces
         bool CambiarUsuarioYContraseña(string nuevoUsuarioIngresado, string nuevaContraseñaIngresada, string nombreUsuarioActual);
         bool PublicarReclamo(string contenido, string nombreUsuarioActual);
        
-
     }
 }

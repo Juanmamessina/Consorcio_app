@@ -64,6 +64,9 @@ namespace ClasesApp.metodos
             // Agregar el nuevo usuario a la lista
             usuarios.Add((Usuario)usuarioNuevo);
 
+            DB.InsertUsuario((Usuario)usuarioNuevo);
+
+
             // Serializar la lista actualizada de usuarios al archivo XML
             serializadora.Serializar(usuarios);
 

@@ -15,12 +15,15 @@ namespace AppConsorcio
 {
     public partial class FormLogIn : Form
     {
-        UsuarioPadre admin;
+        
         public FormLogIn()
         {
             InitializeComponent();
-            //admin = new AdminHijo("ad", "a");
         }
+
+        public delegate void InformacionUsuarioDelegate(string usuario, string contraseña);
+        public event InformacionUsuarioDelegate InformacionUsuarioEvent;
+
 
         public static string NombreUsuarioActual { get; private set; }
         public static string ContraseñaUsuarioActual { get; private set; }
@@ -97,6 +100,7 @@ namespace AppConsorcio
 
             IOperacionesUsuario operacionesUsuario = new MetodosUsuario();
             bool usuarioValidado = operacionesUsuario.ValidarUsuario(usuarioIngresado, contraseñaIngresada);
+            
 
 
             try
@@ -110,6 +114,7 @@ namespace AppConsorcio
                 {
                     NombreUsuarioActual = usuarioIngresado;
                     ContraseñaUsuarioActual = contraseñaIngresada;
+                    InformacionUsuarioEvent?.Invoke(usuarioIngresado, contraseñaIngresada);
                     MessageBox.Show("El ingreso fue exitoso");
                     this.Close();
                     MainMenu menu = new MainMenu();

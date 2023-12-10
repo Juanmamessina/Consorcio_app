@@ -32,6 +32,9 @@
             btnEliminarUsuario = new Button();
             btnCrearUsuario = new Button();
             panel1 = new Panel();
+            cargando_gif = new PictureBox();
+            dataGridView1 = new DataGridView();
+            btnVerUsuariosRegistrados = new Button();
             btnEliminarUsuarioAD = new Button();
             txtNombreUsuarioAEliminar = new TextBox();
             lblNombreUsuarioAEliminar = new Label();
@@ -41,6 +44,8 @@
             txtNombreUsuarioNuevo = new TextBox();
             lblEmitirComunicados = new Label();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)cargando_gif).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // btnEliminarUsuario
@@ -74,6 +79,9 @@
             // panel1
             // 
             panel1.BackColor = Color.Black;
+            panel1.Controls.Add(cargando_gif);
+            panel1.Controls.Add(dataGridView1);
+            panel1.Controls.Add(btnVerUsuariosRegistrados);
             panel1.Controls.Add(btnEliminarUsuarioAD);
             panel1.Controls.Add(txtNombreUsuarioAEliminar);
             panel1.Controls.Add(lblNombreUsuarioAEliminar);
@@ -89,6 +97,44 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(800, 450);
             panel1.TabIndex = 17;
+            // 
+            // cargando_gif
+            // 
+            cargando_gif.BackgroundImageLayout = ImageLayout.Stretch;
+            cargando_gif.Dock = DockStyle.Fill;
+            cargando_gif.Location = new Point(0, 0);
+            cargando_gif.Name = "cargando_gif";
+            cargando_gif.Size = new Size(800, 450);
+            cargando_gif.SizeMode = PictureBoxSizeMode.StretchImage;
+            cargando_gif.TabIndex = 27;
+            cargando_gif.TabStop = false;
+            cargando_gif.Visible = false;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.Anchor = AnchorStyles.None;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(168, 97);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(469, 256);
+            dataGridView1.TabIndex = 26;
+            dataGridView1.Visible = false;
+            // 
+            // btnVerUsuariosRegistrados
+            // 
+            btnVerUsuariosRegistrados.Anchor = AnchorStyles.None;
+            btnVerUsuariosRegistrados.BackColor = Color.White;
+            btnVerUsuariosRegistrados.FlatStyle = FlatStyle.Popup;
+            btnVerUsuariosRegistrados.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnVerUsuariosRegistrados.Location = new Point(257, 285);
+            btnVerUsuariosRegistrados.Name = "btnVerUsuariosRegistrados";
+            btnVerUsuariosRegistrados.Size = new Size(296, 23);
+            btnVerUsuariosRegistrados.TabIndex = 25;
+            btnVerUsuariosRegistrados.Text = "Ver usuarios registrados";
+            btnVerUsuariosRegistrados.UseVisualStyleBackColor = false;
+            btnVerUsuariosRegistrados.Click += btnVerUsuariosRegistrados_Click;
             // 
             // btnEliminarUsuarioAD
             // 
@@ -198,6 +244,8 @@
             Text = "Usuarios";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)cargando_gif).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -214,5 +262,8 @@
         private Button btnEliminarUsuarioAD;
         private TextBox txtNombreUsuarioAEliminar;
         private Label lblNombreUsuarioAEliminar;
+        private Button btnVerUsuariosRegistrados;
+        private DataGridView dataGridView1;
+        private PictureBox cargando_gif;
     }
 }
